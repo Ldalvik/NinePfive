@@ -1,12 +1,12 @@
 # METER — Mode 31 (Routine Control)
 
-Target: 2017 US Accord meter 78100-T2F-A140-M1. Unknown values are retained explicitly.
+| mode/header | Full name | shortname |
+| --- | --- | --- |
+| 31/017000 | Function Test | — |
+| 31/017020 | Unit Replacement Reset | — |
+| 31/017021 | Main Maintenance | — |
+| 31/017022 | Item1 | — |
+| 31/017028 | Item7 | — |
+| 31/01D001 | Customize Reset | — |
 
-| Command | Name | Source | Header | Payload | Request bytes | Response layout | Response bytes | SecurityAccess mode | Field source | Field name | Field ID | Offset / bit | Mask | Parse / decode |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 31/017000 | Meter self-diagnostic | METER A140 HDS/runtime research | 31 01 70 00 | — | 4 | 71 01 70 00 [routine_data...] | UNKNOWN | none invoked by HDS callsite; ECU-side minimum not independently captured | HDS/runtime analysis | results_status | — | see response layout | — | HDS polls 31 03 and examines payload byte after RID; 0x00 terminal success, 0x7F terminal non-success; other values continue |
-| 31/017020 | Maintenance Minder unit-replacement reset | METER A140 HDS/runtime research | 31 01 70 20 | — | 4 | 71 01 70 20 [routine_data...] | UNKNOWN | none invoked by HDS callsite; ECU-side minimum not independently captured | HDS/runtime analysis | results_status | — | see response layout | — | HDS polls 31 03 and examines payload byte after RID; 0x00 terminal success, 0x7F terminal non-success; other values continue |
-| 31/017021 | Reset US Maintenance Minder main item | METER A140 HDS/runtime research | 31 01 70 21 | — | 4 | 71 01 70 21 [routine_data...] | UNKNOWN | none invoked by HDS callsite; ECU-side minimum not independently captured | HDS/runtime analysis | results_status | — | see response layout | — | HDS polls 31 03 and examines payload byte after RID; 0x00 terminal success, 0x7F terminal non-success; other values continue |
-| 31/017022 | Reset US Maintenance Minder item 1 | METER A140 HDS/runtime research | 31 01 70 22 | — | 4 | 71 01 70 22 [routine_data...] | UNKNOWN | none invoked by HDS callsite; ECU-side minimum not independently captured | HDS/runtime analysis | results_status | — | see response layout | — | HDS polls 31 03 and examines payload byte after RID; 0x00 terminal success, 0x7F terminal non-success; other values continue |
-| 31/017028 | Reset US Maintenance Minder item 7 | METER A140 HDS/runtime research | 31 01 70 28 | — | 4 | 71 01 70 28 [routine_data...] | UNKNOWN | none invoked by HDS callsite; ECU-side minimum not independently captured | HDS/runtime analysis | results_status | — | see response layout | — | HDS polls 31 03 and examines payload byte after RID; 0x00 terminal success, 0x7F terminal non-success; other values continue |
-| 31/01D001 | Reset customization data to defaults | METER A140 HDS/runtime research | 31 01 D0 01 | — | 4 | 71 01 D0 01 [routine_data...] | UNKNOWN | none invoked by HDS callsite; ECU-side minimum not independently captured | HDS/runtime analysis | results_status | — | see response layout | — | HDS polls 31 03 and examines payload byte after RID; 0x00 terminal success, 0x7F terminal non-success; other values continue |
+31/01 starts the routine, 31/03 gets the results

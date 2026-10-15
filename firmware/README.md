@@ -27,8 +27,8 @@
 
 | Transmission | Trim / Equipment | KA | KL | Unknown Emissions |
 |---|---|---|---|---|
-| 6AT | EX-L | [`37805-5G0-A040`](https://github.com/Ldalvik/NinePfive/tree/main/firmware/3.5L%20V6/KA%20Federal/6AT/EX-L_Sedan/) | [`37805-5G1-L030`](https://github.com/Ldalvik/NinePfive/tree/main/firmware/3.5L%20V6/KL%20California/6AT/EX-L_Sedan/) | — |
-| 6AT | EX-L Coupe | [`37805-5G0-A940`](https://github.com/Ldalvik/NinePfive/tree/main/firmware/3.5L%20V6/KA%20Federal/6AT/EX-L_Coupe/) | — | [`37805-5G1-L930`](https://github.com/Ldalvik/NinePfive/tree/main/firmware/3.5L%20V6/unknown%20emissions/6AT/EX-L_Coupe/) |
+| 6AT | EX-L | [`37805-5G0-A060`](https://github.com/Ldalvik/NinePfive/tree/main/firmware/3.5L%20V6/KA%20Federal/6AT/EX-L_Sedan/) | [`37805-5G1-L030`](https://github.com/Ldalvik/NinePfive/tree/main/firmware/3.5L%20V6/KL%20California/6AT/EX-L_Sedan/) | — |
+| 6AT | EX-L Coupe | [`37805-5G0-A960`](https://github.com/Ldalvik/NinePfive/tree/main/firmware/3.5L%20V6/KA%20Federal/6AT/EX-L_Coupe/) | — | [`37805-5G1-L930`](https://github.com/Ldalvik/NinePfive/tree/main/firmware/3.5L%20V6/unknown%20emissions/6AT/EX-L_Coupe/) |
 | 6AT | EX-L Navi/Honda Sensing/Touring | — | [`37805-5G1-L830`](https://github.com/Ldalvik/NinePfive/tree/main/firmware/3.5L%20V6/KL%20California/6AT/EX-L_Navi_Sensing_Touring_Sedan/) | — |
 | 6AT | EX-L Navi/Honda Sensing/Touring Coupe | — | — | [`37805-5G1-L430`](https://github.com/Ldalvik/NinePfive/tree/main/firmware/3.5L%20V6/unknown%20emissions/6AT/EX-L_Navi_Sensing_Touring_Coupe/) |
 | 6AT | EX-L Navi/Touring | [`37805-5G0-A850`](https://github.com/Ldalvik/NinePfive/tree/main/firmware/3.5L%20V6/KA%20Federal/6AT/EX-L_Navi_Touring_Sedan/) | — | — |
