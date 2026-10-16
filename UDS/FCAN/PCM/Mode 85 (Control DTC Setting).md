@@ -1,5 +1,3 @@
-# PCM — Mode 85 (Control DTC Setting)
-
-| mode/header | Full name | shortname |
-| --- | --- | --- |
-| 85/02 | Disable DTC setting | — |
+| mode/header | Full name | shortname | Layer |
+| --- | --- | --- | --- |
+| 85/02 | Disable DTC setting | — | PCM |

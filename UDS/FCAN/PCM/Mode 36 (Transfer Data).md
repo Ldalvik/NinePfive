@@ -1,5 +1,3 @@
-# PCM — Mode 36 (Transfer Data)
-
-| mode/header | Full name | shortname |
-| --- | --- | --- |
-| 36 | RWD client TransferData | — |
+| mode/header | Full name | shortname | Layer |
+| --- | --- | --- | --- |
+| 36 | RWD client TransferData | — | PCM |

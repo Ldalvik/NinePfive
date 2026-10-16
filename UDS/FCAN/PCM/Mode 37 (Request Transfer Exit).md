@@ -1,5 +1,3 @@
-# PCM — Mode 37 (Request Transfer Exit)
-
-| mode/header | Full name | shortname |
-| --- | --- | --- |
-| 37 | RWD client RequestTransferExit | — |
+| mode/header | Full name | shortname | Layer |
+| --- | --- | --- | --- |
+| 37 | RWD client RequestTransferExit | — | PCM |

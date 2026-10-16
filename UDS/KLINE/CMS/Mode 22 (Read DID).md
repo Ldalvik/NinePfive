@@ -1,0 +1,8 @@
+| mode/header | Full name | shortname | Layer |
+| --- | --- | --- | --- |
+| 22/0080 | CMBS (CMS) ACTIVATION HISTORY | CMS.CMBSHistory | CMS |
+| 22/0090 | CMBS (CMS) ACTIVATION HISTORY | CMS.CMBSHistory | CMS |
+| 22/00A0 | CMBS (CMS) ACTIVATION HISTORY | CMS.CMBSHistory | CMS |
+| 22/00B0 | CMBS (CMS) ACTIVATION HISTORY | CMS.CMBSHistory | CMS |
+| 22/00C0 | CMBS (CMS) ACTIVATION HISTORY | CMS.CMBSHistory | CMS |
+| 22/00D0 | CMBS (CMS) ACTIVATION HISTORY | CMS.CMBSHistory | CMS |
