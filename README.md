@@ -6,7 +6,7 @@ Reverse engineering resources and tools for 9.5th gen Honda Accord (2016/2017)
 ### [UDS command extraction](UDS/)
 
 # Mode 0x27 41/42 (TYPE_V/Master)
-The following documented K24/J35 master calculations belong only to the `41/42` four-byte seed/key plus tag format. They are separate from the `01/02` programming steps above. The listed engine/tag associations do not establish support across all 2016–2017 ECUs or prove a complete L640 flashing workflow.
+Master SecurityAccess mode constants for ALL 2016-2017 PCM's (no hybrid).
 
 ```
 SS = 32-bit seed, big endian
