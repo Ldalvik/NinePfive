@@ -5,7 +5,7 @@ Reverse engineering resources and tools for 9.5th gen Honda Accord (2016/2017)
 
 ### [UDS command extraction](UDS/)
 
-# Mode 0x27 41/42 (TYPE_V/Master)
+# Mode 0x27 41/42 (Master)
 Master SecurityAccess mode constants for ALL 2016-2017 PCM's (no hybrid).
 
 ```

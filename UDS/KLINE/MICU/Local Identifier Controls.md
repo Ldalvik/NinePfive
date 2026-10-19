@@ -1,4 +1,4 @@
-| Target Name | Target ID | Local ID | Full name (HDS history) | shortname | API payload (?? = variable/unresolved) |
+| Target Name | Target ID | Local ID | Full name (HDS history) | shortname | payload |
 | --- | --- | --- | --- | --- | --- |
 | ALT | 0x72 | 0x01 | A/L headlights | BEFT.FT356_01 | 01 00 00 00 00 00 |
 | METER | 0x50 | 0x07 | A/T Gear Position Indicator (1) | BEFT.FT396_31 | 07 00 00 00 00 00 |

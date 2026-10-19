@@ -1,0 +1,1671 @@
+VERSION "Reviewed Honda profile K24_6MT"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: EPS METER PCM UNKNOWN VSA
+
+
+CM_ BO_ 57 "RX INACTIVE; DLC3; direction relative to PCM.";
+BO_ 57 SRS_0x039: 3 UNKNOWN
+ SG_ SRS_MONITOR_INHIBIT : 0|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown0 : 1|7@1+ (1,0) [0|127] ""  PCM
+ SG_ unknown1 : 8|4@1+ (1,0) [0|15] ""  PCM
+ SG_ SRS_UNKNOWN_STATUS : 12|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown2 : 13|2@1+ (1,0) [0|3] ""  PCM
+ SG_ SRS_READY_STATUS : 15|1@1+ (1,0) [0|1] ""  PCM
+ SG_ CHECKSUM : 16|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 20|2@1+ (1,0) [0|3] ""  PCM
+ SG_ unknown3 : 22|2@1+ (1,0) [0|3] ""  PCM
+
+CM_ BO_ 145 "RX INACTIVE; DLC8; direction relative to PCM. Kinematics codes; X740 HDS associations are reference-only. Physical axes/scales and installed source remain qualified.";
+BO_ 145 VSA_0x091: 8 VSA
+ SG_ CRYAW2 : 7|10@0+ (1,0) [0|1023] "raw"  PCM
+ SG_ AuxiliaryCode : 13|8@0+ (1,0) [0|255] ""  PCM
+ SG_ CGLAT2 : 19|10@0+ (1,0) [0|1023] "raw"  PCM
+ SG_ unknown0 : 20|2@1+ (1,0) [0|3] ""  PCM
+ SG_ CGLON2 : 25|10@0+ (1,0) [0|1023] "raw"  PCM
+ SG_ unknown1 : 40|4@1+ (1,0) [0|15] ""  PCM
+ SG_ LongitudinalFaultSummary : 44|1@1+ (1,0) [0|1] ""  PCM
+ SG_ LateralFaultSummary : 45|1@1+ (1,0) [0|1] ""  PCM
+ SG_ MonitorSummary0 : 46|1@1+ (1,0) [0|1] ""  PCM
+ SG_ YawFaultSummary : 47|1@1+ (1,0) [0|1] ""  PCM
+ SG_ MonitorCondition2 : 48|1@1+ (1,0) [0|1] ""  PCM
+ SG_ MonitorSummary1 : 49|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown2 : 50|2@1+ (1,0) [0|3] ""  PCM
+ SG_ LongitudinalFaultCondition : 52|1@1+ (1,0) [0|1] ""  PCM
+ SG_ LateralFaultCondition : 53|1@1+ (1,0) [0|1] ""  PCM
+ SG_ MonitorCondition0 : 54|1@1+ (1,0) [0|1] ""  PCM
+ SG_ YawFaultCondition : 55|1@1+ (1,0) [0|1] ""  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+ SG_ unknown3 : 62|1@1+ (1,0) [0|1] ""  PCM
+ SG_ ScalarNotReady : 63|1@1+ (1,0) [0|1] ""  PCM
+
+CM_ BO_ 316 "TX ACTIVE; DLC8; direction relative to PCM. Signed modeled/requested torque codes; Nm scale unresolved.";
+BO_ 316 PCM_0x13C: 8 PCM
+ SG_ TORQUE_ESTIMATE : 7|16@0- (1,0) [-32768|32767] "raw"  UNKNOWN
+ SG_ TORQUE_TARGET : 23|16@0- (1,0) [-32768|32767] "raw"  UNKNOWN
+ SG_ APP : 32|8@1+ (0.39215686274509803,0) [0|100] "%"  UNKNOWN
+ SG_ TORQUE_STATE : 40|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ rsvd0 : 42|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ rsvd1 : 44|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ FRAME1AA_WINDOW_LATCH : 45|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ START_PHASE_LATCH : 46|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ DTC_STATUS7_LATCH : 47|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ STOP_CONTACT_GUARD_RAW : 48|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd2 : 49|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ CLSWCC : 50|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd3 : 51|5@1+ (1,0) [0|31] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ INITIALIZED_STATUS_RAW : 62|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ FRAME_1AA_INVALID_OR_FALLBACK_ST : 63|1@1+ (1,0) [0|1] ""  UNKNOWN
+
+CM_ BO_ 342 "No saved selected registration; bus presence unproved; direction relative to PCM. Signed BE angle/rate codes; decoder uses -raw*0.1 deg and -raw deg/s. Orientation and installed source remain qualified.";
+BO_ 342 EPS_0x156: 6 UNKNOWN
+ SG_ SteerAngle_RAW : 7|16@0- (-0.1,0) [-3276.7000000000003|3276.8] "deg"  UNKNOWN
+ SG_ SteerRate_RAW : 23|16@0- (-1,0) [-32767|32768] "deg/s"  UNKNOWN
+ SG_ STEER_SENSOR_STATUS_3 : 32|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ STEER_SENSOR_STATUS_2 : 33|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ STEER_SENSOR_STATUS_1 : 34|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ unknown0 : 35|5@1+ (1,0) [0|31] ""  UNKNOWN
+ SG_ CHECKSUM : 40|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 44|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ PROTOCOL_FLAGS : 46|2@1+ (1,0) [0|3] ""  UNKNOWN
+
+CM_ BO_ 344 "TX ACTIVE; DLC8; direction relative to PCM.";
+BO_ 344 PCM_0x158: 8 PCM
+ SG_ CAPTURE_VEHICLE_SPEED_RAW : 7|16@0+ (0.01,0) [0|655.35] ""  UNKNOWN
+ SG_ rsvd0_Byte0 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ rsvd0_Byte1 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ PROCESSED_VEHICLE_SPEED_RAW : 39|16@0+ (0.01,0) [0|655.35] ""  UNKNOWN
+ SG_ DSTTRV : 48|8@1+ (1,0) [0|255] "raw"  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ PROGRAMMING_ENTRY_LATCHED : 62|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ CVT_THERMAL_WARNING : 63|1@1+ (1,0) [0|1] ""  UNKNOWN
+
+CM_ BO_ 380 "TX ACTIVE; DLC8; direction relative to PCM.";
+BO_ 380 PCM_0x17C: 8 PCM
+ SG_ APP : 0|8@1+ (0.39215686274509803,0) [0|100] "%"  UNKNOWN
+ SG_ THROTTLE_ABOVE_IDLE_CODE : 8|8@1+ (0.4,0) [0|102] "deg"  UNKNOWN
+ SG_ NE : 23|16@0+ (1,0) [0|65535] "rpm"  UNKNOWN
+ SG_ BKSW : 32|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ CRUISE_CANCEL_EVENT : 33|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ CRUISE_FAULT_SPEED_INHIBIT : 34|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ CRUISE_ENGAGED : 35|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ WARN : 36|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ MILSTAT : 37|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ CRPL : 38|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ GAS_PEDAL_PRESSED : 39|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd0 : 40|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ APPLICATION_STATUS_ASSERTED : 41|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ ACCEL_PEDAL_FAULT : 42|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd1 : 43|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ IDLE_STOP_PRIMARY_CONTROL : 45|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ DC2CSTFI : 46|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ ISSTAT : 47|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd2 : 48|5@1+ (1,0) [0|31] ""  UNKNOWN
+ SG_ BKSWNC : 53|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ CRUISE_TRANS_REQUEST_WIRE : 54|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ rsvd3 : 62|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ FIWARN : 63|1@1+ (1,0) [0|1] ""  UNKNOWN
+
+CM_ BO_ 398 "RX ACTIVE; DLC3; direction relative to PCM. EPS-current diagnostic view is gated and nonlinear; ordinary wire value stays raw.";
+BO_ 398 EPS_0x18E: 3 EPS
+ SG_ STATUS_BIT_1_TBD : 2|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STOP_READINESS_INPUT_RAW : 3|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STOP_RESTART_INHIBIT_RAW : 4|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown0 : 5|3@1+ (1,0) [0|7] ""  PCM
+ SG_ IEPSLD : 1|10@0+ (1,0) [0|1023] "raw"  PCM
+ SG_ CHECKSUM : 16|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 20|2@1+ (1,0) [0|3] ""  PCM
+ SG_ STATUS_BIT_2_TBD : 22|1@1+ (1,0) [0|1] ""  PCM
+ SG_ FreshnessReloadStatusTBD : 23|1@1+ (1,0) [0|1] ""  PCM
+
+CM_ BO_ 401 "TX INACTIVE; DLC8; direction relative to PCM. K24 compiled CVT layout; ratio is the lower edge of [raw/64,(raw+1)/64); A9 alone does not identify fallback.";
+BO_ 401 PCM_0x191: 8 PCM
+ SG_ ATPP : 0|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ ATPR : 1|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ ATPN : 2|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ ATPD : 3|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ ATPS : 4|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ ATPL : 5|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ rsvd0 : 6|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ TransmissionFault : 7|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ rsvd1 : 8|4@1+ (1,0) [0|15] ""  METER,VSA
+ SG_ LEDC : 12|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ LEDB : 13|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ LEDA : 14|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ rsvd2 : 15|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ rsvd3 : 16|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ ECOIND : 17|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ rsvd4 : 18|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ MIND : 19|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ CvtCriticalFault : 20|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ rsvd5 : 21|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ CommunicationSpeedFault : 22|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ RangeDisplayControl : 23|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ RATIO : 24|8@1+ (0.015625,0) [0|3.984375] "ratio"  METER,VSA
+ SG_ CvtRatioTarget : 32|8@1+ (0.015625,0) [0|3.984375] "ratio"  METER,VSA
+ SG_ RangeDisplay : 40|4@1+ (1,0) [0|15] ""  METER,VSA
+ SG_ rsvd6 : 44|2@1+ (1,0) [0|3] ""  METER,VSA
+ SG_ CvtFluidServiceReset : 46|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ CvtFluidServiceDue : 47|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ CvtControlScheduleCode : 48|8@1+ (1,0) [0|255] ""  METER,VSA
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  METER,VSA
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  METER,VSA
+ SG_ CvtRatioRangeQualified : 62|1@1+ (1,0) [0|1] ""  METER,VSA
+ SG_ CvtAutoStopHold : 63|1@1+ (1,0) [0|1] ""  METER,VSA
+
+CM_ BO_ 411 "No saved selected registration; bus presence unproved; direction relative to PCM.";
+BO_ 411 XXX_0x19B: 5 UNKNOWN
+ SG_ unknown0 : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown1 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown2 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown3 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ CHECKSUM : 32|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 36|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ PROTOCOL_FLAGS : 38|2@1+ (1,0) [0|3] ""  UNKNOWN
+
+CM_ BO_ 420 "RX ACTIVE; DLC8; direction relative to PCM. Master-cylinder pressure code precedes learned-zero correction. kPa association is L640-only; see ExactConversion.";
+BO_ 420 VSA_0x1A4: 8 VSA
+ SG_ MASTER_CYLINDER_PRESSURE_RAW : 3|12@0+ (1,0) [0|4095] "raw"  PCM
+ SG_ PRESSURE_RELATED_INHIBIT_1 : 4|1@1+ (1,0) [0|1] ""  PCM
+ SG_ PRESSURE_RELATED_INHIBIT_2 : 5|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown0 : 6|2@1+ (1,0) [0|3] ""  PCM
+ SG_ VSA_INTERVENTION_ACTIVE : 16|1@1+ (1,0) [0|1] ""  PCM
+ SG_ ABS_INTERVENTION_ACTIVE : 17|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_1_TBD : 18|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_2_TBD : 19|1@1+ (1,0) [0|1] ""  PCM
+ SG_ VSACASEN : 20|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_3_TBD : 21|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown2 : 22|1@1+ (1,0) [0|1] ""  PCM
+ SG_ COMPUTER_BRAKING_TBD : 23|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown3 : 24|4@1+ (1,0) [0|15] ""  PCM
+ SG_ VSA_DISABLED_TBD : 28|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown4 : 29|1@1+ (1,0) [0|1] ""  PCM
+ SG_ VSA_SYSTEM_UNAVAILABLE_TBD : 30|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown5 : 31|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown6 : 32|2@1+ (1,0) [0|3] ""  PCM
+ SG_ VSA_WATCHDOG_REFRESH_REQUEST : 34|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown7 : 35|5@1+ (1,0) [0|31] ""  PCM
+ SG_ unknown8 : 40|4@1+ (1,0) [0|15] ""  PCM
+ SG_ IDLE_STOP_BRAKE_TRANSITION_TBD : 44|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown9 : 45|3@1+ (1,0) [0|7] ""  PCM
+ SG_ unknown10 : 48|4@1+ (1,0) [0|15] ""  PCM
+ SG_ BRAKE_HOLD_RELATED_TBD : 52|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown11 : 53|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_4_TBD : 54|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown12 : 55|1@1+ (1,0) [0|1] ""  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+ SG_ STATUS_BIT_5_TBD : 62|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_6_TBD : 63|1@1+ (1,0) [0|1] ""  PCM
+
+CM_ BO_ 422 "RX ACTIVE; DLC8; direction relative to PCM.";
+BO_ 422 SCM_0x1A6: 8 METER
+ SG_ HEADLIGHT_STATE : 0|2@1+ (1,0) [0|3] ""  PCM
+ SG_ LIGHTING_STATUS_TBD : 2|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown0 : 3|1@1+ (1,0) [0|1] ""  PCM
+ SG_ PARKBRAKE_CURRENT_RAW : 4|1@1+ (1,0) [0|1] ""  PCM
+ SG_ CCSW : 5|3@1+ (1,0) [0|7] ""  PCM
+ SG_ unknown1 : 8|4@1+ (1,0) [0|15] ""  PCM
+ SG_ STATUS_BIT_1_TBD : 12|2@1+ (1,0) [0|3] ""  PCM
+ SG_ unknown2 : 14|2@1+ (1,0) [0|3] ""  PCM
+ SG_ unknown3 : 16|4@1+ (1,0) [0|15] ""  PCM
+ SG_ AcCompressorOn : 20|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown4 : 21|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_2_TBD : 22|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown5 : 23|1@1+ (1,0) [0|1] ""  PCM
+ SG_ FuelLevel : 24|8@1+ (1,0) [0|255] ""  PCM
+ SG_ FLSVLV : 32|8@1+ (4,0) [0|1020] "receiver count"  PCM
+ SG_ SCM_STATUS_BIT_TBD : 40|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown6 : 41|1@1+ (1,0) [0|1] ""  PCM
+ SG_ CRUISE_SETTING_STATE_TBD : 42|3@1+ (1,0) [0|7] ""  PCM
+ SG_ SCM_STATUS_CODE_TBD : 45|2@1+ (1,0) [0|3] ""  PCM
+ SG_ OUT_WARN_CRUMAIN : 47|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown7 : 48|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+ SG_ STATUS_BIT_3_TBD : 62|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown8 : 63|1@1+ (1,0) [0|1] ""  PCM
+
+CM_ BO_ 426 "RX ACTIVE; DLC8; direction relative to PCM.";
+BO_ 426 XXX_0x1AA: 8 VSA
+ SG_ SignedNumericChannelTBD : 7|16@0- (1,0) [-32768|32767] "raw"  PCM
+ SG_ StateCodeD2Bits1To0TBD : 16|2@1+ (1,0) [0|3] ""  PCM
+ SG_ StateCodeD2Bits3To2TBD : 18|2@1+ (1,0) [0|3] ""  PCM
+ SG_ VsaCategoryStateTBD : 20|4@1+ (1,0) [0|15] ""  PCM
+ SG_ unknown0 : 24|3@1+ (1,0) [0|7] ""  PCM
+ SG_ STATUS_BIT_1_TBD : 27|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown1 : 28|4@1+ (1,0) [0|15] ""  PCM
+ SG_ unknown2 : 32|8@1+ (1,0) [0|255] ""  PCM
+ SG_ unknown3 : 40|2@1+ (1,0) [0|3] ""  PCM
+ SG_ STATUS_BIT_2_TBD : 42|1@1+ (1,0) [0|1] ""  PCM
+ SG_ ISINFISAB : 43|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown4 : 44|2@1+ (1,0) [0|3] ""  PCM
+ SG_ STATUS_BIT_3_TBD : 46|1@1+ (1,0) [0|1] ""  PCM
+ SG_ ISINFVSA : 47|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown5 : 48|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+ SG_ STATUS_BIT_4_TBD : 62|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown6 : 63|1@1+ (1,0) [0|1] ""  PCM
+
+CM_ BO_ 432 "RX INACTIVE; DLC7; direction relative to PCM. Standstill/status slices retain saved L640 coordinates; J35 consumption and physical meanings remain qualified.";
+BO_ 432 VSA_0x1B0: 7 VSA
+ SG_ unknown0 : 0|8@1+ (1,0) [0|255] ""  PCM
+ SG_ unknown1 : 8|4@1+ (1,0) [0|15] ""  PCM
+ SG_ WHEELS_MOVING : 12|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown2 : 13|2@1+ (1,0) [0|3] ""  PCM
+ SG_ unknown3 : 15|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown4 : 16|8@1+ (1,0) [0|255] ""  PCM
+ SG_ unknown5 : 24|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 48|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 52|2@1+ (1,0) [0|3] ""  PCM
+ SG_ PROTOCOL_FLAGS : 54|2@1+ (1,0) [0|3] ""  PCM
+ SG_ STANDSTILL_BRAKE_STATUS_D4B3_TBD : 35|1@1+ (1,0) [0|0] ""  PCM
+ SG_ unknown6 : 32|3@1+ (1,0) [0|0] ""  PCM
+ SG_ STANDSTILL_BRAKE_STATUS_D4B4_TBD : 36|1@1+ (1,0) [0|0] ""  PCM
+ SG_ STANDSTILL_BRAKE_STATUS_D4B5_TBD : 37|1@1+ (1,0) [0|0] ""  PCM
+ SG_ STANDSTILL_BRAKE_STATUS_D4B6_TBD : 38|1@1+ (1,0) [0|0] ""  PCM
+ SG_ unknown6_part1 : 39|1@1+ (1,0) [0|0] ""  PCM
+ SG_ STANDSTILL_STATUS_D5B0_TBD : 40|1@1+ (1,0) [0|0] ""  PCM
+ SG_ STANDSTILL_STATUS_D5B1_TBD : 41|1@1+ (1,0) [0|0] ""  PCM
+ SG_ STANDSTILL_STATE_D5_BITS3_2_TBD : 42|2@1+ (1,0) [0|0] ""  PCM
+ SG_ unknown7 : 44|4@1+ (1,0) [0|0] ""  PCM
+
+CM_ BO_ 464 "RX ACTIVE; DLC8; direction relative to PCM. Four packed unsigned 15-bit wheel codes; 0.00993422 km/h/count corroborated. No rolling counter.";
+BO_ 464 VSA_0x1D0: 8 VSA
+ SG_ WheelSpeedFL : 7|15@0+ (0.00993422,0) [0|325.51458674] "km/h"  PCM
+ SG_ WheelSpeedFR : 8|15@0+ (0.00993422,0) [0|325.51458674] "km/h"  PCM
+ SG_ WheelSpeedRL : 25|15@0+ (0.00993422,0) [0|325.51458674] "km/h"  PCM
+ SG_ WheelSpeedRR : 42|15@0+ (0.00993422,0) [0|325.51458674] "km/h"  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+
+CM_ BO_ 476 "TX ACTIVE; DLC4; direction relative to PCM.";
+BO_ 476 PCM_0x1DC: 4 PCM
+ SG_ FCAPOPEN : 0|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ INTERNAL_MODE_OR_FEATURE_GATE_TB : 1|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ B0_RESERVED_5_2_RAW : 2|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ STATUS_BIT_1_TBD : 6|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ B0_RESERVED_7_RAW : 7|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ EngineRPM : 15|16@0+ (1,0) [0|65535] "rpm"  UNKNOWN
+ SG_ CHECKSUM : 24|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 28|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ STATUS_BIT_2_TBD : 30|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ STATUS_BIT_3_TBD : 31|1@1+ (1,0) [0|1] ""  UNKNOWN
+
+CM_ BO_ 490 "No saved selected registration; bus presence unproved; direction relative to PCM. Model-output words; acceleration units remain unproved.";
+BO_ 490 ABS_0x1EA: 8 VSA
+ SG_ ModelCode0 : 7|16@0+ (1,0) [0|65535] "raw"  UNKNOWN
+ SG_ ModelCode1 : 23|16@0+ (1,0) [0|65535] "raw"  UNKNOWN
+ SG_ ModelCode2 : 39|16@0+ (1,0) [0|65535] "raw"  UNKNOWN
+ SG_ ModelState : 48|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ unknown0 : 49|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ QueueStateQualified : 50|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ unknown1 : 51|5@1+ (1,0) [0|31] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ PROTOCOL_FLAGS : 62|2@1+ (1,0) [0|3] ""  UNKNOWN
+
+CM_ BO_ 538 "RX INACTIVE; DLC5; direction relative to PCM.";
+BO_ 538 XXX_0x21A: 5 VSA
+ SG_ RawD0 : 0|8@1+ (1,0) [0|255] ""  PCM
+ SG_ STATUS_BIT_1_TBD : 8|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown0 : 9|5@1+ (1,0) [0|31] ""  PCM
+ SG_ unknown1 : 14|2@1+ (1,0) [0|3] ""  PCM
+ SG_ unknown2 : 16|6@1+ (1,0) [0|63] ""  PCM
+ SG_ STATUS_BIT_2_TBD : 22|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_3_TBD : 23|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown3 : 24|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 32|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 36|2@1+ (1,0) [0|3] ""  PCM
+ SG_ unknown4 : 38|2@1+ (1,0) [0|3] ""  PCM
+
+CM_ BO_ 542 "RX ACTIVE; DLC7; direction relative to PCM.";
+BO_ 542 XXX_0x21E: 7 METER
+ SG_ D0_D1_RAW : 7|16@0+ (1,0) [0|65535] ""  PCM
+ SG_ D2_RAW : 16|8@1+ (1,0) [0|255] ""  PCM
+ SG_ AffineChannelD3TBD_RAW : 24|8@1+ (10,-400) [-400|2150] "internal count"  PCM
+ SG_ STATUS_BIT_1_TBD : 32|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_2_TBD : 33|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_3_TBD : 34|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown0 : 35|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_4_TBD : 36|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown1 : 37|3@1+ (1,0) [0|7] ""  PCM
+ SG_ D5_RAW : 40|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 48|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 52|2@1+ (1,0) [0|3] ""  PCM
+ SG_ D6_UPPER_RAW : 54|2@1+ (1,0) [0|3] ""  PCM
+
+CM_ BO_ 545 "RX ACTIVE; DLC4; direction relative to PCM.";
+BO_ 545 IPC_0x221: 4 UNKNOWN
+ SG_ TemperatureDeciC_SensorTBD_RAW : 0|8@1+ (1,-30) [-30|225] "degC"  PCM
+ SG_ EncodedStatusOrModeTBD : 8|8@1+ (1,0) [0|255] ""  PCM
+ SG_ ECONO : 16|3@1+ (1,0) [0|7] ""  PCM
+ SG_ unknown0 : 19|2@1+ (1,0) [0|3] ""  PCM
+ SG_ InhibitStatusTBD : 21|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown1 : 22|1@1+ (1,0) [0|1] ""  PCM
+ SG_ EconModeStatusCandidate : 23|1@1+ (1,0) [0|1] ""  PCM
+ SG_ CHECKSUM : 24|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 28|2@1+ (1,0) [0|3] ""  PCM
+ SG_ ProtocolHighBits : 30|2@1+ (1,0) [0|3] ""  PCM
+
+CM_ BO_ 597 "No saved selected registration; bus presence unproved; direction relative to PCM. Byte6 U8 sequence; byte7 additive U8 checksum. FA/FF and status/fallback paths are not unconditional physical speeds.";
+BO_ 597 ABS_0x255: 8 VSA
+ SG_ LFWSDAT : 0|8@1+ (1,0) [0|255] "raw"  UNKNOWN
+ SG_ RFWSDAT : 8|8@1+ (1,0) [0|255] "raw"  UNKNOWN
+ SG_ LRWSDAT : 16|8@1+ (1,0) [0|255] "raw"  UNKNOWN
+ SG_ RRWSDAT : 24|8@1+ (1,0) [0|255] "raw"  UNKNOWN
+ SG_ unknown0 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown1 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ COUNTER : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ CHECKSUM : 56|8@1+ (1,0) [0|255] ""  UNKNOWN
+
+CM_ BO_ 660 "RX ACTIVE; DLC8; direction relative to PCM.";
+BO_ 660 MICU_0x294: 8 METER
+ SG_ unknown0 : 0|3@1+ (1,0) [0|7] ""  PCM
+ SG_ WiperStatus : 3|2@1+ (1,0) [0|3] ""  PCM
+ SG_ BlinkerLeft : 5|1@1+ (1,0) [0|1] ""  PCM
+ SG_ BlinkerRight : 6|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown1 : 7|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown2 : 8|8@1+ (1,0) [0|255] ""  PCM
+ SG_ unknown3 : 16|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_1_TBD : 17|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown4 : 18|2@1+ (1,0) [0|3] ""  PCM
+ SG_ STATUS_BIT_2_TBD : 20|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown5 : 21|1@1+ (1,0) [0|1] ""  PCM
+ SG_ CONFIGURED_STATUS_GATE_TBD : 22|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown6 : 23|1@1+ (1,0) [0|1] ""  PCM
+ SG_ DSTODO : 31|24@0+ (1,0) [0|16777215] "raw"  PCM
+ SG_ TRANSITION_LATCH_INPUT_TBD : 48|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown7 : 49|7@1+ (1,0) [0|127] ""  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+ SG_ PROTOCOL_FLAGS : 62|2@1+ (1,0) [0|3] ""  PCM
+
+CM_ BO_ 661 "No saved selected registration; bus presence unproved; direction relative to PCM. Wire DLC4; source header retains a two-byte documentary prefix. Other-profile source/fitment remains qualified.";
+BO_ 661 BCM_0x295: 4 UNKNOWN
+ SG_ unknown0 : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown1 : 8|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ TpmsButtonPressed : 12|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ unknown2 : 13|3@1+ (1,0) [0|7] ""  UNKNOWN
+ SG_ unknown_payload_byte2 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ CHECKSUM : 24|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 28|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ unknown_payload_high2 : 30|2@1+ (1,0) [0|3] ""  UNKNOWN
+
+CM_ BO_ 773 "RX INACTIVE; DLC7; direction relative to PCM. d1[5:4] is a two-bit restraint-state code; individual buckle meanings remain unresolved.";
+BO_ 773 SRS_0x305: 7 UNKNOWN
+ SG_ unknown0 : 0|7@1+ (1,0) [0|127] ""  PCM
+ SG_ OUT_WARN_SBELT : 7|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown1 : 8|2@1+ (1,0) [0|3] ""  PCM
+ SG_ PassengerUnlatched : 10|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown2 : 11|1@1+ (1,0) [0|1] ""  PCM
+ SG_ PassengerAirbagOff : 14|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown4 : 15|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown5 : 16|8@1+ (1,0) [0|255] ""  PCM
+ SG_ unknown6 : 24|8@1+ (1,0) [0|255] ""  PCM
+ SG_ unknown7 : 32|8@1+ (1,0) [0|255] ""  PCM
+ SG_ unknown8 : 40|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 48|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 52|2@1+ (1,0) [0|3] ""  PCM
+ SG_ PROTOCOL_FLAGS : 54|2@1+ (1,0) [0|3] ""  PCM
+ SG_ OCCUPANT_RESTRAINT_STATE_CODE_TB : 12|2@1+ (1,0) [0|0] ""  PCM
+
+CM_ BO_ 777 "RX ACTIVE; DLC8; direction relative to PCM.";
+BO_ 777 PCM_0x309: 8 METER
+ SG_ unknown2 : 16|8@1+ (1,0) [0|255] ""  PCM
+ SG_ unknown3 : 24|8@1+ (1,0) [0|255] ""  PCM
+ SG_ Speed : 39|16@0+ (0.01,0) [0|655.35] "km/h"  PCM
+ SG_ unknown4 : 48|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+ SG_ SECONDARY_SPEEDLIKE_WORD_RAW_TBD : 7|16@0+ (1,0) [0|0] ""  PCM
+ SG_ SPEED_STATUS_D7B6_TBD : 62|1@1+ (1,0) [0|0] ""  PCM
+ SG_ SPEED_STATUS_D7B7_TBD : 63|1@1+ (1,0) [0|0] ""  PCM
+
+CM_ BO_ 800 "TX ACTIVE; DLC8; direction relative to PCM.";
+BO_ 800 BCM_0x320: 8 PCM
+ SG_ rsvd0 : 0|6@1+ (1,0) [0|63] ""  UNKNOWN
+ SG_ EngineStateCodeTBD : 6|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ STATUS_BIT_1_TBD : 8|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ STATUS_BIT_2_TBD : 9|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd1 : 10|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ VTECIND : 14|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd2 : 15|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ StateCodeB2_TBD : 16|3@1+ (1,0) [0|7] ""  UNKNOWN
+ SG_ SignedCapOutOfDomainHighBitsB2_T : 19|3@1+ (1,0) [0|7] ""  UNKNOWN
+ SG_ STATUS_BIT_3_TBD : 22|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ SignedCapOutOfDomainSignBitB2_TB : 23|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd3 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ rsvd4 : 32|7@1+ (1,0) [0|127] ""  UNKNOWN
+ SG_ STATUS_BIT_4_TBD : 39|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ StateCodeB5Low_TBD : 40|3@1+ (1,0) [0|7] ""  UNKNOWN
+ SG_ StateCodeB5High_TBD : 43|3@1+ (1,0) [0|7] ""  UNKNOWN
+ SG_ SignedCapOutOfDomainHighBitsB5_T : 46|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ STATUS_BIT_5_TBD : 48|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd5 : 49|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ STATUS_BIT_6_TBD : 51|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd6 : 52|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ STATUS_BIT_7_TBD : 62|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ STATUS_BIT_8_TBD : 63|1@1+ (1,0) [0|1] ""  UNKNOWN
+
+CM_ BO_ 804 "TX ACTIVE; DLC8; direction relative to PCM.";
+CM_ SG_ 804 IMMOBILIZER_REPORTING_CODE "0 complete+accepted; 1 incomplete; 2 complete+not-accepted. HDS IMBLIZ uses another encoding; no physical authorization claim.";
+CM_ SG_ 804 IAT "Raw FF is invalid.";
+CM_ SG_ 804 ECT "Raw FF is invalid.";
+BO_ 804 PCM_0x324: 8 PCM
+ SG_ ECT : 0|8@1+ (1,-40) [-40|215] "degC"  UNKNOWN
+ SG_ IAT : 8|8@1+ (1,-40) [-40|215] "degC"  UNKNOWN
+ SG_ tripFuelCosumed : 23|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ CRUISE_SET_SPEED_PRESENTATION_KP : 32|8@1+ (1,0) [0|255] "km/h"  UNKNOWN
+ SG_ ESTIMATED_ROAD_GRADE_EIGHTHS_PER : 40|8@1- (0.125,0) [-16|15.875] ""  UNKNOWN
+ SG_ SCS : 48|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ TIMED_MONITOR_HOLD_RAW : 49|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ DIAGNOSTIC_MONITOR_STATE_INVERTE : 50|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ MONITOR_CACHE_INVERTED_RAW : 51|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ IMMOBILIZER_REPORTING_CODE : 52|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ SIGNED_CAP_OUT_OF_DOMAIN_SIGN_BI : 54|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ TIMED_CONTROLLER_STATE_RAW : 55|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ ROUTINE_020E_ACTIVE_RAW : 62|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ DIAGNOSTIC_MONITOR_STATE_IN_0000 : 63|1@1+ (1,0) [0|1] ""  UNKNOWN
+
+CM_ BO_ 808 "TX ACTIVE; DLC8; direction relative to PCM.";
+BO_ 808 XXX_0x328: 8 PCM
+ SG_ rsvd0 : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ IDLE_STOP_CVT_PREREQUISITE_RAW : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ rsvd1 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ rsvd2 : 24|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ STOCK_DISABLED_IDLE_STOP_PREREQU : 26|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd3 : 27|5@1+ (1,0) [0|31] ""  UNKNOWN
+ SG_ rsvd4 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ rsvd5 : 40|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ THROTTLE_ACTUATOR_SUPPLY_VOLTAGE : 42|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ STATUS_BIT_1_TBD : 43|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ SECONDARY_REQUEST_LIMIT_ENABLE_R : 44|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd6 : 45|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ DISCRETE_INPUT_QUALIFICATION_RAW : 46|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ STARTUP_QUALIFICATION_COMPLETE_R : 47|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ CRUISE_TRANSITION_REASON_CODE_RA : 48|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ rsvd7 : 52|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ STATUS_BIT_2_TBD : 54|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd8 : 55|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ THREE_BYTE_BITWISE_INTERSECTION_ : 62|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ ACCELERATOR_PEDAL_DUAL_TRACK_FAU : 63|1@1+ (1,0) [0|1] ""  UNKNOWN
+
+CM_ BO_ 871 "RX ACTIVE; DLC8; direction relative to PCM. Battery data; signed/clamped derived current is nonlinear. Wire values preserve source status limits.";
+BO_ 871 XXX_0x367: 8 METER
+ SG_ IPBAT : 0|24@1+ (1,0) [0|16777215] "raw"  PCM
+ SG_ VBPBAT : 24|16@1+ (0.001,0) [0|65.535] "V"  PCM
+ SG_ B5_LOW7_TBD : 40|7@1+ (1,0) [0|127] ""  PCM
+ SG_ IBATSTATUS : 47|1@1+ (1,0) [0|1] ""  PCM
+ SG_ B6_RAW_TBD : 48|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+ SG_ B7_STATE_TBD : 62|2@1+ (1,0) [0|3] ""  PCM
+
+CM_ BO_ 882 "RX ACTIVE; DLC2; direction relative to PCM.";
+BO_ 882 BCM_0x372: 2 METER
+ SG_ STATUS_BIT_1_TBD : 0|2@1+ (1,0) [0|3] ""  PCM
+ SG_ unknown0 : 2|1@1+ (1,0) [0|1] ""  PCM
+ SG_ ISINFHSW : 3|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_2_TBD : 4|1@1+ (1,0) [0|1] ""  PCM
+ SG_ SW_ICU_HOOD : 5|1@1+ (1,0) [0|1] ""  PCM
+ SG_ unknown1 : 6|2@1+ (1,0) [0|3] ""  PCM
+ SG_ CHECKSUM : 8|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 12|2@1+ (1,0) [0|3] ""  PCM
+ SG_ BODY_STATUS_D1_B7_RAW : 15|1@1+ (1,0) [0|0] ""  PCM
+ SG_ PROTOCOL_FLAGS : 14|1@1+ (1,0) [0|0] ""  PCM
+
+CM_ BO_ 884 "No saved selected registration; bus presence unproved; direction relative to PCM.";
+BO_ 884 XXX_0x374: 8 UNKNOWN
+ SG_ unknown0_Byte0 : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte1 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte2 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte3 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte4 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte5 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte6 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte7 : 56|8@1+ (1,0) [0|255] ""  UNKNOWN
+
+CM_ BO_ 891 "RX ACTIVE; DLC8; direction relative to PCM.";
+BO_ 891 XXX_0x37B: 8 METER
+ SG_ unknown0 : 0|4@1+ (1,0) [0|15] ""  PCM
+ SG_ ChannelD0HighNibbleX20TBD : 4|4@1+ (1,0) [0|15] ""  PCM
+ SG_ unknown1 : 8|4@1+ (1,0) [0|15] ""  PCM
+ SG_ ChannelD1HighNibbleX20TBD : 12|4@1+ (1,0) [0|15] ""  PCM
+ SG_ unknown2 : 16|5@1+ (1,0) [0|31] ""  PCM
+ SG_ StalkStatusBitTBD : 21|1@1+ (1,0) [0|1] ""  PCM
+ SG_ StalkStatusCodeTBD : 22|2@1+ (1,0) [0|3] ""  PCM
+ SG_ unknown3 : 24|8@1+ (1,0) [0|255] ""  PCM
+ SG_ unknown4 : 32|8@1+ (1,0) [0|255] ""  PCM
+ SG_ unknown5 : 40|8@1+ (1,0) [0|255] ""  PCM
+ SG_ unknown6 : 48|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+ SG_ unknown7 : 62|2@1+ (1,0) [0|3] ""  PCM
+
+CM_ BO_ 918 "No saved selected registration; bus presence unproved; direction relative to PCM.";
+BO_ 918 XXX_0x396: 7 UNKNOWN
+ SG_ unknown0_Byte0 : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte1 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte2 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte3 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte4 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte5 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte6 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+
+CM_ BO_ 929 "No saved selected registration; bus presence unproved; direction relative to PCM.";
+BO_ 929 SCM_0x3A1: 8 METER
+ SG_ WiperSpeed : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown1 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown2 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown3 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown4 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown5 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ PROTOCOL_FLAGS : 62|2@1+ (1,0) [0|3] ""  UNKNOWN
+
+CM_ BO_ 983 "TX ACTIVE; DLC8; direction relative to PCM.";
+BO_ 983 PCM_0x3D7: 8 PCM
+ SG_ MultiplexHeader : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ RetainedBankACodeWord0_Page0 m0 : 15|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ RetainedBankACodeWord0_Page1 m1 : 15|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ RetainedBankACodeWord1_Page0 m0 : 31|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ RetainedBankACodeWord1_Page1 m1 : 31|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ RetainedBankACodeWord2_Page0 m0 : 47|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ RetainedBankACodeWord2_Page1 m1 : 47|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ PageIndex M : 62|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ ProtocolBit7 : 63|1@1+ (1,0) [0|1] ""  UNKNOWN
+
+CM_ BO_ 985 "No saved selected registration; bus presence unproved; direction relative to PCM.";
+BO_ 985 XXX_0x3D9: 3 VSA
+ SG_ unknown0_Byte0 : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte1 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte2 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+
+CM_ BO_ 1024 "TX ACTIVE; DLC5; direction relative to PCM.";
+BO_ 1024 XXX_0x400: 5 PCM
+ SG_ DtcBankABaseCode : 7|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ MILSTAT : 16|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ MONITOR_STARTUP_HOLD_RAW : 17|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd0 : 18|6@1+ (1,0) [0|63] ""  UNKNOWN
+ SG_ TableAvailable : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ CHECKSUM : 32|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 36|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ ProtocolHighBits : 38|2@1+ (1,0) [0|3] ""  UNKNOWN
+
+CM_ BO_ 1027 "TX INACTIVE; DLC5; direction relative to PCM.";
+BO_ 1027 XXX_0x403: 5 PCM
+ SG_ DtcBankBBaseCode : 7|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ rsvd0 : 16|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ STATUS_BIT_1_TBD : 17|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ rsvd1 : 18|6@1+ (1,0) [0|63] ""  UNKNOWN
+ SG_ TableAvailable : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ CHECKSUM : 32|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 36|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ rsvd2 : 38|2@1+ (1,0) [0|3] ""  UNKNOWN
+
+CM_ BO_ 1029 "No saved selected registration; bus presence unproved; direction relative to PCM. Pilot reference paths; installed source and physical lamp identities remain qualified.";
+BO_ 1029 SCM_0x405: 8 METER
+ SG_ unknown3 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown4 : 32|5@1+ (1,0) [0|31] ""  UNKNOWN
+ SG_ DoorOpenFL : 37|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ DoorOpenFR : 38|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ DoorOpenRL : 39|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ DoorOpenRR : 40|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ TrunkOpen : 41|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ unknown6 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ PROTOCOL_FLAGS : 62|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ MIL_DERIVED_STATUS : 0|1@1+ (1,0) [0|0] ""  UNKNOWN
+ SG_ unknown0 : 1|7@1+ (1,0) [0|0] ""  UNKNOWN
+ SG_ SHARED_431DC_STATUS_D2B3_TBD : 19|1@1+ (1,0) [0|0] ""  UNKNOWN
+ SG_ unknown2 : 20|4@1+ (1,0) [0|0] ""  UNKNOWN
+ SG_ IMMOBILIZER_LAMP_STATE_TBD : 42|1@1+ (1,0) [0|0] ""  UNKNOWN
+ SG_ unknown5 : 43|5@1+ (1,0) [0|0] ""  UNKNOWN
+ SG_ REFERENCE_RX333_D0B2_NONZERO : 15|1@1+ (1,0) [0|0] ""  UNKNOWN
+ SG_ REFERENCE_RX333_D0B3_NONZERO : 14|1@1+ (1,0) [0|0] ""  UNKNOWN
+ SG_ unknown1 : 8|6@1+ (1,0) [0|0] ""  UNKNOWN
+ SG_ REFERENCE_RX333_D0B4_NONZERO : 17|1@1+ (1,0) [0|0] ""  UNKNOWN
+ SG_ REFERENCE_RX333_D0B5_NONZERO : 16|1@1+ (1,0) [0|0] ""  UNKNOWN
+ SG_ unknown2_part1 : 18|1@1+ (1,0) [0|0] ""  UNKNOWN
+
+CM_ BO_ 1030 "No saved selected registration; bus presence unproved; direction relative to PCM.";
+BO_ 1030 XXX_0x406: 5 UNKNOWN
+ SG_ unknown0_Byte0 : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte1 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte2 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte3 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte4 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+
+CM_ BO_ 1036 "TX ACTIVE; DLC8; direction relative to PCM. Multiplexed diagnostic caches; source sampling, gating and physical observations are separate.";
+BO_ 1036 XXX_0x40C: 8 PCM
+ SG_ MULTIPLEX_PAGE M : 0|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ MULTIPLEX_GROUP : 4|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ DIAGNOSTIC_EVENT_STATE : 6|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ P00_rsvd0 m0 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P01_VIN_CHARACTERS_1__6_10_B1 m1 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P02_VIN_CHARACTERS_7__12_11_B1 m2 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P03_VIN_CHARACTERS_13__17_12_B1 m3 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P04_ECUID1 m4 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P05_NE m5 : 15|16@0+ (0.25,0) [0|16383.75] "rpm"  UNKNOWN
+ SG_ P06_TA m6 : 8|8@1+ (0.0196078431372549,0) [0|5] "V"  UNKNOWN
+ SG_ P07_VSP m7 : 8|8@1+ (1,0) [0|255] "km/h"  UNKNOWN
+ SG_ P08_APP m8 : 15|16@0+ (0.005,0) [0|327.675] "%"  UNKNOWN
+ SG_ P09_THO m9 : 15|16@0+ (0.005,0) [0|327.675] "deg"  UNKNOWN
+ SG_ P0A_rsvd0_Byte0 m10 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0B_FSS m11 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0C_rsvd0 m12 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0D_rsvd0 m13 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0E_GAIR m14 : 15|16@0+ (0.01,0) [0|655.35] "g/s"  UNKNOWN
+ SG_ P0F_FLI m15 : 8|8@1+ (0.39215686274509803,0) [0|100] "%"  UNKNOWN
+ SG_ P00_DIAGNOSTICEVENTORFREEZEDTCCO m0 : 23|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ P01_VIN_CHARACTERS_1__6_10_B2 m1 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P02_VIN_CHARACTERS_7__12_11_B2 m2 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P03_VIN_CHARACTERS_13__17_12_B2 m3 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P04_ECUID2 m4 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P06_IAT m6 : 16|8@1+ (1,-40) [-40|215] "degC"  UNKNOWN
+ SG_ P07_CLV m7 : 16|8@1+ (0.39215686274509803,0) [0|100] "%"  UNKNOWN
+ SG_ P0A_rsvd0_Byte1 m10 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0B_SVO2 m11 : 16|8@1+ (0.0196078431372549,0) [0|5] "V"  UNKNOWN
+ SG_ P0C_rsvd1 m12 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0D_XILAF m13 : 23|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ P0F_rsvd0 m15 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P01_VIN_CHARACTERS_1__6_10_B3 m1 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P02_VIN_CHARACTERS_7__12_11_B3 m2 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P03_VIN_CHARACTERS_13__17_12_B3 m3 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P04_ECUID3 m4 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P05_ABSTH m5 : 24|8@1+ (0.39215686274509803,0) [0|100] "%"  UNKNOWN
+ SG_ P06_PB m6 : 24|8@1+ (0.0196078431372549,0) [0|5] "V"  UNKNOWN
+ SG_ P07_IG m7 : 24|8@1+ (0.5,-64) [-64|63.5] "deg"  UNKNOWN
+ SG_ P08_TH_1 m8 : 24|8@1+ (0.0196078431372549,0) [0|5] "V"  UNKNOWN
+ SG_ P09_THROTTLE_AN12_BASELINE_RAW m9 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0A_LAMBDA m10 : 31|16@0+ (3.0517578125e-05,0) [0|1.999969482421875] "ratio"  UNKNOWN
+ SG_ P0B_rsvd0 m11 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0C_rsvd2 m12 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0E_VTCANGL m14 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0F_rsvd1 m15 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P00_FORMATORLENGTHCODE_6 m0 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P01_VIN_CHARACTERS_1__6_10_B4 m1 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P02_VIN_CHARACTERS_7__12_11_B4 m2 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P03_VIN_CHARACTERS_13__17_12_B4 m3 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P04_ECUID4 m4 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P05_RELTH m5 : 32|8@1+ (0.39215686274509803,0) [0|100] "%"  UNKNOWN
+ SG_ P06_MAP m6 : 32|8@1+ (1,0) [0|255] "kPa"  UNKNOWN
+ SG_ P07_CONTROL_MODULE_VOLTAGE_CLAMP m7 : 32|8@1+ (1,0) [0|255] "raw"  UNKNOWN
+ SG_ P08_TH_2 m8 : 32|8@1+ (0.0196078431372549,0) [0|5] "V"  UNKNOWN
+ SG_ P09_THROTTLE_AN45_BASELINE_RAW m9 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0B_rsvd1 m11 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0C_rsvd3 m12 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0D_AFM m13 : 32|8@1+ (0.0196078431372549,0) [0|5] "V"  UNKNOWN
+ SG_ P0E_ENGINE_RUNTIME_RAW m14 : 39|16@0+ (1,0) [0|65535] "s"  UNKNOWN
+ SG_ P0F_rsvd2 m15 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P00_rsvd1_Byte0 m0 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P01_VIN_CHARACTERS_1__6_10_B5 m1 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P02_VIN_CHARACTERS_7__12_11_B5 m2 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P03_VIN_CHARACTERS_13__17_12_B5 m3 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P04_ECUID5 m4 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P05_TW m5 : 40|8@1+ (0.0196078431372549,0) [0|5] "V"  UNKNOWN
+ SG_ P06_PA m6 : 40|8@1+ (0.0196078431372549,0) [0|5] "V"  UNKNOWN
+ SG_ P07_APPS1 m7 : 40|8@1+ (0.0196078431372549,0) [0|5] "V"  UNKNOWN
+ SG_ P08_RELTHW m8 : 47|16@0+ (0.005,0) [0|327.675] "deg"  UNKNOWN
+ SG_ P09_THICMD m9 : 47|16@0+ (0.005,0) [0|327.675] "deg"  UNKNOWN
+ SG_ P0A_KLAF m10 : 40|8@1+ (0.0078125,0) [0|1.9921875] "ratio"  UNKNOWN
+ SG_ P0B_rsvd2 m11 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0C_TOUT m12 : 47|16@0+ (0.004,0) [0|262.14] "ms"  UNKNOWN
+ SG_ P0D_CMDEQRAT m13 : 47|16@0+ (3.0517578125e-05,0) [0|1.999969482421875] "ratio"  UNKNOWN
+ SG_ P0F_rsvd3 m15 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P00_rsvd1_Byte1 m0 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P01_VIN_CHARACTERS_1__6_10_B6 m1 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P02_VIN_CHARACTERS_7__12_11_B6 m2 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P03_IDENTIFICATIONEXTRABYTE_TBD_ m3 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P04_rsvd0 m4 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P05_ECT m5 : 48|8@1+ (1,-40) [-40|215] "degC"  UNKNOWN
+ SG_ P06_BARO m6 : 48|8@1+ (1,0) [0|255] "kPa"  UNKNOWN
+ SG_ P07_APPS2 m7 : 48|8@1+ (0.0196078431372549,0) [0|5] "V"  UNKNOWN
+ SG_ P0A_KLAFAVE m10 : 48|8@1+ (0.0078125,0) [0|1.9921875] "ratio"  UNKNOWN
+ SG_ P0B_rsvd3 m11 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P0E_DPCS m14 : 48|8@1+ (0.39215686274509803,0) [0|100] "%"  UNKNOWN
+ SG_ P0F_rsvd4 m15 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ DIAGNOSTIC_STATUS_FLAG6 : 62|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ DIAGNOSTIC_STATUS_FLAG7 : 63|1@1+ (1,0) [0|1] ""  UNKNOWN
+
+CM_ BO_ 1039 "TX INACTIVE; DLC8; direction relative to PCM.";
+BO_ 1039 XXX_0x40F: 8 PCM
+ SG_ MULTIPLEX_PAGE M : 0|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ MULTIPLEX_GROUP : 4|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ DIAGNOSTIC_EVENT_STATE : 6|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ P00_PAGE0_B1_RAW m0 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P01_PAGE1_B1_RAW m1 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P02_NEW m2 : 15|16@0+ (1,0) [0|65535] "rpm"  UNKNOWN
+ SG_ P03_NDN m3 : 15|16@0+ (1,0) [0|65535] "rpm"  UNKNOWN
+ SG_ P04_TA m4 : 8|8@1+ (1,-40) [-40|215] "degC"  UNKNOWN
+ SG_ P05_APSAT m5 : 8|8@1+ (0.5,0) [0|127.5] "%"  UNKNOWN
+ SG_ P06_ICMDDR m6 : 8|8@1+ (0.005,0) [0|1.2750000000000001] "A"  UNKNOWN
+ SG_ P07_ICMDCPC m7 : 8|8@1+ (0.005,0) [0|1.2750000000000001] "A"  UNKNOWN
+ SG_ UnspecifiedPage_rsvd0 m8 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P00_FRZDTC m0 : 23|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ P01_PAGE1_B2_RAW m1 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P04_PAAD m4 : 16|8@1+ (0.0196,0) [0|4.998] "V"  UNKNOWN
+ SG_ P05_TATFAD m5 : 16|8@1+ (0.0196,0) [0|4.998] "V"  UNKNOWN
+ SG_ P06_IACTDR m6 : 16|8@1+ (0.005,0) [0|1.2750000000000001] "A"  UNKNOWN
+ SG_ P07_IACTCPC m7 : 16|8@1+ (0.005,0) [0|1.2750000000000001] "A"  UNKNOWN
+ SG_ UnspecifiedPage_rsvd1 m8 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P01_PAGE1_B3_RAW m1 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P02_NT m2 : 31|16@0+ (1,0) [0|65535] "rpm"  UNKNOWN
+ SG_ P03_VLVEL1 m3 : 24|8@1+ (1,0) [0|255] "km/h"  UNKNOWN
+ SG_ P04_PBAD m4 : 24|8@1+ (0.0196,0) [0|4.998] "V"  UNKNOWN
+ SG_ P05_PDNAD m5 : 24|8@1+ (0.0196,0) [0|4.998] "V"  UNKNOWN
+ SG_ P06_ICMDDN m6 : 24|8@1+ (0.005,0) [0|1.2750000000000001] "A"  UNKNOWN
+ SG_ P07_rsvd0 m7 : 24|5@1+ (1,0) [0|31] ""  UNKNOWN
+ SG_ UnspecifiedPage_rsvd2 m8 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P07_SHO_P m7 : 29|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P07_SHB m7 : 30|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P07_SHA m7 : 31|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P00_PAGE0_B4_RAW m0 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P01_PAGE1_B4_RAW m1 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P03_VLVABS m3 : 32|8@1+ (1,0) [0|255] "km/h"  UNKNOWN
+ SG_ P04_THAD1 m4 : 32|8@1+ (0.0196,0) [0|4.998] "V"  UNKNOWN
+ SG_ P05_LONACAD m5 : 32|8@1+ (0.0196,0) [0|4.998] "V"  UNKNOWN
+ SG_ P06_IACTDN m6 : 32|8@1+ (0.005,0) [0|1.2750000000000001] "A"  UNKNOWN
+ SG_ P07_rsvd1 m7 : 32|6@1+ (1,0) [0|63] ""  UNKNOWN
+ SG_ UnspecifiedPage_rsvd3 m8 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P07_INHSOL m7 : 38|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P07_SLS m7 : 39|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P00_PAGE0_B5_RAW m0 : 47|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ P01_PAGE1_B5_RAW m1 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P02_NDR m2 : 47|16@0+ (1,0) [0|65535] "rpm"  UNKNOWN
+ SG_ P03_VSP m3 : 40|8@1+ (1,0) [0|255] "km/h"  UNKNOWN
+ SG_ P04_TWAD m4 : 40|8@1+ (0.0196,0) [0|4.998] "V"  UNKNOWN
+ SG_ P05_NEOP m5 : 40|8@1+ (50,0) [0|12750] "rpm"  UNKNOWN
+ SG_ P06_ICMDLCC m6 : 40|8@1+ (0.005,0) [0|1.2750000000000001] "A"  UNKNOWN
+ SG_ P07_rsvd2 m7 : 40|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ UnspecifiedPage_rsvd4 m8 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P07_ATPL m7 : 42|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P07_ATPS m7 : 43|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P07_ATPD m7 : 44|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P07_ATPN m7 : 45|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P07_ATPR m7 : 46|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P07_ATPP m7 : 47|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P01_PAGE1_B6_RAW m1 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P03_STNDRDBF m3 : 48|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ P04_VB m4 : 48|8@1+ (0.1,0) [0|25.5] "V"  UNKNOWN
+ SG_ P05_rsvd0 m5 : 48|6@1+ (1,0) [0|63] ""  UNKNOWN
+ SG_ P06_IACTLCC m6 : 48|8@1+ (0.005,0) [0|1.2750000000000001] "A"  UNKNOWN
+ SG_ P07_rsvd3 m7 : 48|3@1+ (1,0) [0|7] ""  UNKNOWN
+ SG_ UnspecifiedPage_rsvd5 m8 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ P03_CLPMOD m3 : 50|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P03_DECFC m3 : 51|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P07_PPIN m7 : 51|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P03_STVELDBF m3 : 52|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ P07_rsvd4 m7 : 52|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ P03_STNTDBF m3 : 54|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ P05_BRKSW m5 : 54|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P07_ATPRVS m7 : 54|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P05_SCS m5 : 55|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ P07_ATPFWD m7 : 55|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ PROTOCOL_FLAGS : 62|2@1+ (1,0) [0|3] ""  UNKNOWN
+
+CM_ BO_ 1057 "No saved selected registration; bus presence unproved; direction relative to PCM.";
+BO_ 1057 EPS_0x421: 5 EPS
+ SG_ helper_12828_high8 : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ b1_reserved : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ gp_5B97_or_first_message_zero : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ b3_marker : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ CHECKSUM : 32|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 36|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ b4_top2_raw : 38|2@1+ (1,0) [0|3] ""  UNKNOWN
+
+CM_ BO_ 1064 "RX INACTIVE; DLC7; direction relative to PCM.";
+BO_ 1064 XXX_0x428: 7 METER
+ SG_ EncodedValueD0TBD : 0|8@1+ (1,0) [0|255] ""  PCM
+ SG_ EncodedValueD1TBD : 8|8@1+ (1,0) [0|255] ""  PCM
+ SG_ unknown0 : 16|6@1+ (1,0) [0|63] ""  PCM
+ SG_ STATUS_BIT_1_TBD : 22|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_2_TBD : 23|1@1+ (1,0) [0|1] ""  PCM
+ SG_ SecondaryDistanceCounterRawTBD_B : 24|8@1+ (1,0) [0|255] ""  PCM
+ SG_ SecondaryDistanceCounterRaw_0000 : 32|8@1+ (1,0) [0|255] ""  PCM
+ SG_ SecondaryDistanceCounterRaw_0001 : 40|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 48|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 52|2@1+ (1,0) [0|3] ""  PCM
+ SG_ unknown1 : 54|2@1+ (1,0) [0|3] ""  PCM
+
+CM_ BO_ 1088 "RX ACTIVE; DLC8; direction relative to PCM. Multiplexed battery/cache records; nonlinear or unproved physical conversions remain raw.";
+BO_ 1088 XXX_0x440: 8 METER
+ SG_ Mux M : 0|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P31_unknown0 m49 : 8|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P32_RCLPBAT m50 : 8|16@1+ (1,0) [0|65535] "raw"  PCM
+ SG_ P33_unknown0 m51 : 8|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P39_unknown0 m57 : 8|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P3A_page3A_temp_word_RAW m58 : 8|8@1+ (1,-40) [-40|215] "degC"  PCM
+ SG_ UnspecifiedPage_unknown0 m0 : 8|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P31_unknown1 m49 : 16|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P33_unknown1 m51 : 16|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P39_unknown1 m57 : 16|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P3A_unknown0 m58 : 16|8@1+ (1,0) [0|255] ""  PCM
+ SG_ UnspecifiedPage_unknown1 m0 : 16|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P31_TPBAT m49 : 24|8@1+ (1,-40) [-40|215] "degC"  PCM
+ SG_ P32_raw34 m50 : 24|16@1+ (3.5172,0) [0|230499.702] "A*s"  PCM
+ SG_ P33_unknown2 m51 : 24|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P39_VBATCO m57 : 24|8@1+ (4,4600) [4600|5620] "code"  PCM
+ SG_ P3A_page3A_word34 m58 : 24|16@1+ (1,0) [0|65535] ""  PCM
+ SG_ UnspecifiedPage_unknown2 m0 : 24|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P31_SOCPBAT m49 : 32|8@1+ (1,0) [0|255] "raw"  PCM
+ SG_ P33_unknown3 m51 : 32|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P39_SOHQPBAT m57 : 32|8@1+ (1,0) [0|255] "raw"  PCM
+ SG_ UnspecifiedPage_unknown3 m0 : 32|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P31_d5_low3 m49 : 40|3@1+ (1,0) [0|7] ""  PCM
+ SG_ P32_raw56 m50 : 40|16@1+ (3.5172,0) [0|230499.702] "A*s"  PCM
+ SG_ P33_unknown4 m51 : 40|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P39_SOFVPBAT m57 : 40|8@1+ (25,0) [0|6375] "code"  PCM
+ SG_ P3A_raw56 m58 : 40|16@1+ (1,0) [0|65535] ""  PCM
+ SG_ UnspecifiedPage_unknown4 m0 : 40|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P31_d5_mid2 m49 : 43|2@1+ (1,0) [0|3] ""  PCM
+ SG_ P31_d5_bit5 m49 : 45|1@1+ (1,0) [0|1] ""  PCM
+ SG_ P31_d5_bit6 m49 : 46|1@1+ (1,0) [0|1] ""  PCM
+ SG_ P31_unknown2 m49 : 47|1@1+ (1,0) [0|1] ""  PCM
+ SG_ P31_d6_low3 m49 : 48|3@1+ (1,0) [0|7] ""  PCM
+ SG_ P33_unknown5 m51 : 48|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P39_BATSRST m57 : 48|1@1+ (1,0) [0|1] ""  PCM
+ SG_ UnspecifiedPage_unknown5 m0 : 48|8@1+ (1,0) [0|255] ""  PCM
+ SG_ P39_BDCHGBAT m57 : 49|1@1+ (1,0) [0|1] ""  PCM
+ SG_ P39_d6_bit2 m57 : 50|1@1+ (1,0) [0|1] ""  PCM
+ SG_ P31_unknown3 m49 : 51|3@1+ (1,0) [0|7] ""  PCM
+ SG_ P39_d6_bit3 m57 : 51|1@1+ (1,0) [0|1] ""  PCM
+ SG_ P39_unknown2 m57 : 52|3@1+ (1,0) [0|7] ""  PCM
+ SG_ P31_d6_bit6 m49 : 54|1@1+ (1,0) [0|1] ""  PCM
+ SG_ P31_d6_bit7 m49 : 55|1@1+ (1,0) [0|1] ""  PCM
+ SG_ P39_d6_bit7 m57 : 55|1@1+ (1,0) [0|1] ""  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+ SG_ page_state : 62|2@1+ (1,0) [0|3] ""  PCM
+
+CM_ BO_ 1089 "TX ACTIVE; DLC8; direction relative to PCM.";
+BO_ 1089 XXX_0x441: 8 PCM
+ SG_ BATID : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown1 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown2 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown3 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown4 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown5 : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ unknown6 : 62|2@1+ (1,0) [0|3] ""  UNKNOWN
+
+CM_ BO_ 1108 "TX ACTIVE; DLC8; direction relative to PCM.";
+BO_ 1108 XXX_0x454: 8 PCM
+ SG_ RETAINED_MODEL_QUANTITY_RAW : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ BARO : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ STATE_CODE_B2_RAW : 16|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ BAROMETRIC_SENSOR_FAULT_AGGREGAT : 20|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ SIGNED_STATE_BIT5_RAW : 21|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ MODEL_HOLD_ACTIVE_RAW : 22|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ B2_BIT7_RAW : 23|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ SCALED_MODEL_QUANTITY_RAW : 31|16@0+ (1,0) [0|65535] ""  UNKNOWN
+ SG_ B5_RESERVED_RAW : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ ELECTRICAL_MONITOR_SECONDARY_RAW : 48|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ STATUS_BIT_1_TBD : 49|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ STATUS_BIT_2_TBD : 50|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ ELECTRICAL_MONITOR_PRIMARY_RAW : 51|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ B6_RESERVED_4_RAW : 52|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ POST_CRANK_CONTROL_LATCH_RAW : 53|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ VARIANT_CODE_MATCH_RAW : 54|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ MONITOR_HOLD_RAW : 55|1@1+ (1,0) [0|1] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ B7_RESERVED_RAW : 62|2@1+ (1,0) [0|3] ""  UNKNOWN
+
+CM_ BO_ 1125 "TX ACTIVE; DLC8; direction relative to PCM.";
+BO_ 1125 PCM_0x465: 8 PCM
+ SG_ rsvd0_Byte0 : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ rsvd0_Byte1 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ rsvd0_Byte2 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ rsvd0_Byte3 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ rsvd0_Byte4 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ rsvd0_Byte5 : 40|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ AMBIENT_ECO_ASSIST_MODE : 48|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  UNKNOWN
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  UNKNOWN
+ SG_ rsvd1 : 62|2@1+ (1,0) [0|3] ""  UNKNOWN
+
+CM_ BO_ 1296 "RX ACTIVE; DLC3; direction relative to PCM.";
+BO_ 1296 XXX_0x510: 3 UNKNOWN
+ SG_ unknown0 : 0|8@1+ (1,0) [0|255] ""  PCM
+ SG_ unknown1 : 8|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 16|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 20|2@1+ (1,0) [0|3] ""  PCM
+ SG_ unknown2 : 22|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_1_TBD : 23|1@1+ (1,0) [0|1] ""  PCM
+
+CM_ BO_ 1365 "No saved selected registration; bus presence unproved; direction relative to PCM.";
+BO_ 1365 XXX_0x555: 5 UNKNOWN
+ SG_ unknown0_Byte0 : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte1 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte2 : 16|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte3 : 24|8@1+ (1,0) [0|255] ""  UNKNOWN
+ SG_ unknown0_Byte4 : 32|8@1+ (1,0) [0|255] ""  UNKNOWN
+
+
+
+
+BA_DEF_ SG_  "ExactConversion" STRING ;
+BA_DEF_ SG_  "SourceMembers" STRING ;
+BA_DEF_ SG_  "DerivedUnit" STRING ;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "SourceMembers" SG_ 145 CGLON2 "CGLON2_High2,CGLON2_Low8";
+BA_ "SourceMembers" SG_ 145 CGLAT2 "CGLAT2_High4,CGLAT2_Low6";
+BA_ "SourceMembers" SG_ 145 AuxiliaryCode "AuxiliaryCodeHigh6,AuxiliaryCodeLow2";
+BA_ "SourceMembers" SG_ 145 CRYAW2 "CRYAW2_High8,CRYAW2_Low2";
+BA_ "SystemSignalLongSymbol" SG_ 316 FRAME_1AA_INVALID_OR_FALLBACK_ST "FRAME_1AA_INVALID_OR_FALLBACK_STATE_TBD";
+BA_ "SourceMembers" SG_ 316 CLSWCC "CLSWCC_CAN_INVERTED";
+BA_ "SourceMembers" SG_ 316 rsvd1 "STOCK_UNUSED_PEDAL_THRESHOLD_FLAG";
+BA_ "SourceMembers" SG_ 316 APP "APP_RAW";
+BA_ "SourceMembers" SG_ 344 DSTTRV "DSTTRV_LOW8";
+BA_ "SourceMembers" SG_ 344 rsvd0_Byte1 "rsvd0";
+BA_ "SourceMembers" SG_ 344 rsvd0_Byte0 "rsvd0";
+BA_ "SourceMembers" SG_ 380 rsvd2 "STOCK_UNUSED_D6_LOW5";
+BA_ "SourceMembers" SG_ 380 DC2CSTFI "IDLE_STOP_DC_DC_CST";
+BA_ "SourceMembers" SG_ 380 APP "APP_RAW";
+BA_ "ExactConversion" SG_ 398 IEPSLD "0.5*floor(raw/5)";
+BA_ "SourceMembers" SG_ 398 IEPSLD "IEPSLD_High2,IEPSLD_Low8";
+BA_ "DerivedUnit" SG_ 398 IEPSLD "A";
+BA_ "SourceMembers" SG_ 401 CvtControlScheduleCode "DriveState";
+BA_ "SourceMembers" SG_ 401 CvtFluidServiceDue "CVT_FLUID_SERVICE_DUE_TBD";
+BA_ "SourceMembers" SG_ 401 CvtFluidServiceReset "CVT_FLUID_SERVICE_RESET_ACK_TBD";
+BA_ "SourceMembers" SG_ 401 CvtRatioTarget "CvtRatioRequest";
+BA_ "SourceMembers" SG_ 401 RATIO "RATIO_RAW";
+BA_ "SourceMembers" SG_ 401 RangeDisplayControl "RANGE_DISPLAY_CONTROL_TBD";
+BA_ "SourceMembers" SG_ 401 CommunicationSpeedFault "COMMUNICATION_SPEED_FAULT_TBD";
+BA_ "SourceMembers" SG_ 401 CvtCriticalFault "CRITICAL_FAULT_LATCH_TBD";
+BA_ "SourceMembers" SG_ 401 ATPR "ReverseIndicator";
+BA_ "SourceMembers" SG_ 420 unknown3 "UnknownBits_2";
+BA_ "ExactConversion" SG_ 420 MASTER_CYLINDER_PRESSURE_RAW "clamp(trunc0(2396*(raw-102)/100),0,65535)";
+BA_ "SourceMembers" SG_ 420 MASTER_CYLINDER_PRESSURE_RAW "unknown1,PressureRaw12";
+BA_ "DerivedUnit" SG_ 420 MASTER_CYLINDER_PRESSURE_RAW "receiver count; kPa unit association is L640-only";
+BA_ "SourceMembers" SG_ 422 STATUS_BIT_3_TBD "SCM_STATUS_D7B6_TBD";
+BA_ "SourceMembers" SG_ 422 FLSVLV "FLSVLV_RAW";
+BA_ "SourceMembers" SG_ 422 unknown3 "UnknownBits_1";
+BA_ "SourceMembers" SG_ 422 STATUS_BIT_1_TBD "V6_STATUS_D1_BITS5_4_TBD";
+BA_ "SourceMembers" SG_ 422 PARKBRAKE_CURRENT_RAW "SW_PARKBRAKE_CUR";
+BA_ "SourceMembers" SG_ 426 ISINFISAB "ISINFISAB_CAN_INVERTED";
+BA_ "SourceMembers" SG_ 432 STANDSTILL_STATUS_D5B0_TBD "unknown7";
+BA_ "SourceMembers" SG_ 432 STANDSTILL_BRAKE_STATUS_D4B3_TBD "unknown6";
+BA_ "SourceMembers" SG_ 432 unknown2 "UnknownBits_2";
+BA_ "SourceMembers" SG_ 432 unknown1 "UnknownBits_1";
+BA_ "SourceMembers" SG_ 464 CHECKSUM "HondaChecksumOnly";
+BA_ "SourceMembers" SG_ 464 WheelSpeedRR "WheelSpeedRRHigh3,WheelSpeedRRMid8,WheelSpeedRRLow4";
+BA_ "SourceMembers" SG_ 464 WheelSpeedRL "WheelSpeedRLHigh2,WheelSpeedRLMid8,WheelSpeedRLLow5";
+BA_ "SourceMembers" SG_ 464 WheelSpeedFR "WheelSpeedFRHigh1,WheelSpeedFRMid8,WheelSpeedFRLow6";
+BA_ "SourceMembers" SG_ 464 WheelSpeedFL "WheelSpeedFLHigh8,WheelSpeedFLLow7";
+BA_ "SourceMembers" SG_ 476 STATUS_BIT_3_TBD "STATUS_B3_7_TBD";
+BA_ "SourceMembers" SG_ 476 STATUS_BIT_2_TBD "STATUS_B3_6_TBD";
+BA_ "SourceMembers" SG_ 476 STATUS_BIT_1_TBD "STATUS_B0_6_TBD";
+BA_ "SystemSignalLongSymbol" SG_ 476 INTERNAL_MODE_OR_FEATURE_GATE_TB "INTERNAL_MODE_OR_FEATURE_GATE_TBD";
+BA_ "SourceMembers" SG_ 490 ModelCode1 "LongAccel";
+BA_ "SourceMembers" SG_ 490 ModelCode0 "LatAccel";
+BA_ "SourceMembers" SG_ 538 unknown4 "UNKNOWN_D4_BITS7_6_RAW";
+BA_ "SourceMembers" SG_ 538 unknown3 "UNKNOWN_D3_RAW";
+BA_ "SourceMembers" SG_ 538 unknown2 "UNKNOWN_D2_BITS5_0_RAW";
+BA_ "SourceMembers" SG_ 538 unknown1 "SCALED_091_RELATED_CODE_LO2_TBD";
+BA_ "SourceMembers" SG_ 538 unknown0 "UNKNOWN_D1_BITS5_1_RAW";
+BA_ "SourceMembers" SG_ 538 RawD0 "SCALED_091_RELATED_CODE_HI8_TBD";
+BA_ "SourceMembers" SG_ 545 ProtocolHighBits "PROTOCOL_FLAGS";
+BA_ "SourceMembers" SG_ 660 STATUS_BIT_2_TBD "SCM_STATUS_D2B4_TBD";
+BA_ "SourceMembers" SG_ 660 STATUS_BIT_1_TBD "SCM_STATUS_D2B1_TBD";
+BA_ "SourceMembers" SG_ 660 unknown1 "UnknownBit_2";
+BA_ "SourceMembers" SG_ 660 unknown0 "UnknownBits_1";
+BA_ "SourceMembers" SG_ 661 COUNTER "X740_REFERENCE_COUNTER";
+BA_ "SourceMembers" SG_ 661 CHECKSUM "X740_REFERENCE_CHECKSUM";
+BA_ "SourceMembers" SG_ 661 unknown2 "UnknownBits_2";
+BA_ "SourceMembers" SG_ 661 unknown1 "UnknownBits_1";
+BA_ "SourceMembers" SG_ 773 unknown4 "UnknownBit_5";
+BA_ "SourceMembers" SG_ 773 OCCUPANT_RESTRAINT_STATE_CODE_TB "DriverUnlatched,UnknownBit_3";
+BA_ "SystemSignalLongSymbol" SG_ 773 OCCUPANT_RESTRAINT_STATE_CODE_TB "OCCUPANT_RESTRAINT_STATE_CODE_TBD";
+BA_ "SourceMembers" SG_ 773 unknown2 "UnknownBit_4";
+BA_ "SourceMembers" SG_ 773 unknown1 "UnknownBits_2";
+BA_ "SourceMembers" SG_ 773 unknown0 "UnknownBits_1";
+BA_ "SourceMembers" SG_ 777 SPEED_STATUS_D7B6_TBD "PROTOCOL_FLAGS";
+BA_ "SourceMembers" SG_ 777 SECONDARY_SPEEDLIKE_WORD_RAW_TBD "unknown0,unknown1";
+BA_ "SourceMembers" SG_ 800 STATUS_BIT_8_TBD "StatusB7_7_TBD";
+BA_ "SourceMembers" SG_ 800 STATUS_BIT_7_TBD "StatusB7_6_TBD";
+BA_ "SourceMembers" SG_ 800 COUNTER "RollingCounter";
+BA_ "SourceMembers" SG_ 800 CHECKSUM "HondaChecksum";
+BA_ "SourceMembers" SG_ 800 STATUS_BIT_6_TBD "StatusB6_3_TBD";
+BA_ "SourceMembers" SG_ 800 STATUS_BIT_5_TBD "StatusB6_0_TBD";
+BA_ "SystemSignalLongSymbol" SG_ 800 SignedCapOutOfDomainHighBitsB5_T "SignedCapOutOfDomainHighBitsB5_TBD";
+BA_ "SourceMembers" SG_ 800 STATUS_BIT_4_TBD "StatusB4_7_TBD";
+BA_ "SourceMembers" SG_ 800 rsvd4 "Reserved_012";
+BA_ "SourceMembers" SG_ 800 rsvd3 "Reserved_010";
+BA_ "SystemSignalLongSymbol" SG_ 800 SignedCapOutOfDomainSignBitB2_TB "SignedCapOutOfDomainSignBitB2_TBD";
+BA_ "SourceMembers" SG_ 800 STATUS_BIT_3_TBD "StatusOrOutOfDomainCapBitB2_6_TBD";
+BA_ "SystemSignalLongSymbol" SG_ 800 SignedCapOutOfDomainHighBitsB2_T "SignedCapOutOfDomainHighBitsB2_TBD";
+BA_ "SourceMembers" SG_ 800 rsvd2 "Reserved_023";
+BA_ "SourceMembers" SG_ 800 rsvd1 "Reserved_004";
+BA_ "SourceMembers" SG_ 800 STATUS_BIT_2_TBD "StatusB1_1_TBD";
+BA_ "SourceMembers" SG_ 800 STATUS_BIT_1_TBD "StatusB1_0_TBD";
+BA_ "SourceMembers" SG_ 800 rsvd0 "Reserved_002";
+BA_ "SystemSignalLongSymbol" SG_ 804 DIAGNOSTIC_MONITOR_STATE_IN_0000 "DIAGNOSTIC_MONITOR_STATE_INVERTED_B7_TBD";
+BA_ "SystemSignalLongSymbol" SG_ 804 SIGNED_CAP_OUT_OF_DOMAIN_SIGN_BI "SIGNED_CAP_OUT_OF_DOMAIN_SIGN_BIT_B6_TBD";
+BA_ "SourceMembers" SG_ 804 IMMOBILIZER_REPORTING_CODE "CONTROL_ACTIVITY_CODE_RAW";
+BA_ "SystemSignalLongSymbol" SG_ 804 DIAGNOSTIC_MONITOR_STATE_INVERTE "DIAGNOSTIC_MONITOR_STATE_INVERTED_B6_TBD";
+BA_ "SystemSignalLongSymbol" SG_ 804 ESTIMATED_ROAD_GRADE_EIGHTHS_PER "ESTIMATED_ROAD_GRADE_EIGHTHS_PERCENT_RAW";
+BA_ "SystemSignalLongSymbol" SG_ 804 CRUISE_SET_SPEED_PRESENTATION_KP "CRUISE_SET_SPEED_PRESENTATION_KPH";
+BA_ "SourceMembers" SG_ 804 IAT "IAT_RAW";
+BA_ "SourceMembers" SG_ 804 ECT "ECT_RAW";
+BA_ "SystemSignalLongSymbol" SG_ 808 ACCELERATOR_PEDAL_DUAL_TRACK_FAU "ACCELERATOR_PEDAL_DUAL_TRACK_FAULT_ANY";
+BA_ "SystemSignalLongSymbol" SG_ 808 THREE_BYTE_BITWISE_INTERSECTION_ "THREE_BYTE_BITWISE_INTERSECTION_NONZERO_TBD";
+BA_ "SourceMembers" SG_ 808 STATUS_BIT_2_TBD "STATUS_B6_6_TBD";
+BA_ "SystemSignalLongSymbol" SG_ 808 CRUISE_TRANSITION_REASON_CODE_RA "CRUISE_TRANSITION_REASON_CODE_RAW";
+BA_ "SystemSignalLongSymbol" SG_ 808 STARTUP_QUALIFICATION_COMPLETE_R "STARTUP_QUALIFICATION_COMPLETE_RAW";
+BA_ "SystemSignalLongSymbol" SG_ 808 SECONDARY_REQUEST_LIMIT_ENABLE_R "SECONDARY_REQUEST_LIMIT_ENABLE_RAW";
+BA_ "SourceMembers" SG_ 808 STATUS_BIT_1_TBD "STATUS_B5_3_TBD";
+BA_ "SystemSignalLongSymbol" SG_ 808 THROTTLE_ACTUATOR_SUPPLY_VOLTAGE "THROTTLE_ACTUATOR_SUPPLY_VOLTAGE_OFF_EVENT_TBD";
+BA_ "SourceMembers" SG_ 808 rsvd4 "RESERVED_B4";
+BA_ "SystemSignalLongSymbol" SG_ 808 STOCK_DISABLED_IDLE_STOP_PREREQU "STOCK_DISABLED_IDLE_STOP_PREREQUISITE_RAW";
+BA_ "SourceMembers" SG_ 808 rsvd1 "RESERVED_B2";
+BA_ "SourceMembers" SG_ 808 rsvd0 "RESERVED_B0";
+BA_ "SourceMembers" SG_ 871 VBPBAT "VBPBAT_RAW";
+BA_ "ExactConversion" SG_ 871 IPBAT "clamp(trunc0((raw-2000000)/10),-32768,32767)*0.01";
+BA_ "SourceMembers" SG_ 871 IPBAT "IPBAT_RAW";
+BA_ "DerivedUnit" SG_ 871 IPBAT "A";
+BA_ "SourceMembers" SG_ 882 BODY_STATUS_D1_B7_RAW "PROTOCOL_FLAGS";
+BA_ "SourceMembers" SG_ 882 unknown1 "UnknownBits_2";
+BA_ "SourceMembers" SG_ 882 STATUS_BIT_2_TBD "BODY_STATUS_D0_B4_RAW";
+BA_ "SourceMembers" SG_ 882 ISINFHSW "BODY_STATUS_D0_B3_RAW";
+BA_ "SourceMembers" SG_ 882 STATUS_BIT_1_TBD "BODY_STATUS_CODE_D0_RAW";
+BA_ "SourceMembers" SG_ 884 unknown0_Byte7 "unknown0";
+BA_ "SourceMembers" SG_ 884 unknown0_Byte6 "unknown0";
+BA_ "SourceMembers" SG_ 884 unknown0_Byte5 "unknown0";
+BA_ "SourceMembers" SG_ 884 unknown0_Byte4 "unknown0";
+BA_ "SourceMembers" SG_ 884 unknown0_Byte3 "unknown0";
+BA_ "SourceMembers" SG_ 884 unknown0_Byte2 "unknown0";
+BA_ "SourceMembers" SG_ 884 unknown0_Byte1 "unknown0";
+BA_ "SourceMembers" SG_ 884 unknown0_Byte0 "unknown0";
+BA_ "SourceMembers" SG_ 918 unknown0_Byte6 "unknown0";
+BA_ "SourceMembers" SG_ 918 unknown0_Byte5 "unknown0";
+BA_ "SourceMembers" SG_ 918 unknown0_Byte4 "unknown0";
+BA_ "SourceMembers" SG_ 918 unknown0_Byte3 "unknown0";
+BA_ "SourceMembers" SG_ 918 unknown0_Byte2 "unknown0";
+BA_ "SourceMembers" SG_ 918 unknown0_Byte1 "unknown0";
+BA_ "SourceMembers" SG_ 918 unknown0_Byte0 "unknown0";
+BA_ "SourceMembers" SG_ 983 RetainedBankACodeWord2_Page1 "RetainedBankACodeWord2";
+BA_ "SourceMembers" SG_ 983 RetainedBankACodeWord2_Page0 "RetainedBankACodeWord2";
+BA_ "SourceMembers" SG_ 983 RetainedBankACodeWord1_Page1 "RetainedBankACodeWord1";
+BA_ "SourceMembers" SG_ 983 RetainedBankACodeWord1_Page0 "RetainedBankACodeWord1";
+BA_ "SourceMembers" SG_ 983 RetainedBankACodeWord0_Page1 "RetainedBankACodeWord0";
+BA_ "SourceMembers" SG_ 983 RetainedBankACodeWord0_Page0 "RetainedBankACodeWord0";
+BA_ "SourceMembers" SG_ 985 unknown0_Byte2 "unknown0";
+BA_ "SourceMembers" SG_ 985 unknown0_Byte1 "unknown0";
+BA_ "SourceMembers" SG_ 985 unknown0_Byte0 "unknown0";
+BA_ "SourceMembers" SG_ 1024 COUNTER "RollingCounter";
+BA_ "SourceMembers" SG_ 1024 CHECKSUM "HondaChecksum";
+BA_ "SourceMembers" SG_ 1024 rsvd0 "Reserved";
+BA_ "SourceMembers" SG_ 1027 rsvd2 "ReservedB4";
+BA_ "SourceMembers" SG_ 1027 COUNTER "RollingCounter";
+BA_ "SourceMembers" SG_ 1027 CHECKSUM "HondaChecksum";
+BA_ "SourceMembers" SG_ 1027 STATUS_BIT_1_TBD "StatusB2_1_TBD";
+BA_ "SourceMembers" SG_ 1029 IMMOBILIZER_LAMP_STATE_TBD "UnknownBits_2";
+BA_ "SourceMembers" SG_ 1029 unknown4 "UnknownBits_1";
+BA_ "SourceMembers" SG_ 1029 SHARED_431DC_STATUS_D2B3_TBD "unknown2";
+BA_ "SourceMembers" SG_ 1029 REFERENCE_RX333_D0B2_NONZERO "unknown1";
+BA_ "SourceMembers" SG_ 1029 MIL_DERIVED_STATUS "unknown0";
+BA_ "SourceMembers" SG_ 1030 unknown0_Byte4 "unknown0";
+BA_ "SourceMembers" SG_ 1030 unknown0_Byte3 "unknown0";
+BA_ "SourceMembers" SG_ 1030 unknown0_Byte2 "unknown0";
+BA_ "SourceMembers" SG_ 1030 unknown0_Byte1 "unknown0";
+BA_ "SourceMembers" SG_ 1030 unknown0_Byte0 "unknown0";
+BA_ "SourceMembers" SG_ 1036 DIAGNOSTIC_STATUS_FLAG7 "rsvd6,DIAGNOSTIC_STATUS_BIT7";
+BA_ "SourceMembers" SG_ 1036 DIAGNOSTIC_STATUS_FLAG6 "rsvd6,DIAGNOSTIC_STATUS_BIT6";
+BA_ "SourceMembers" SG_ 1036 P0F_rsvd4 "rsvd4,P0F_RESERVED_63_B6";
+BA_ "SourceMembers" SG_ 1036 P0E_DPCS "DPCS";
+BA_ "SourceMembers" SG_ 1036 P0B_rsvd3 "rsvd3,P0B_RESERVED_51_B6";
+BA_ "SourceMembers" SG_ 1036 P0A_KLAFAVE "KLAFAVE";
+BA_ "SourceMembers" SG_ 1036 P07_APPS2 "APPS2";
+BA_ "SourceMembers" SG_ 1036 P06_BARO "BARO";
+BA_ "SourceMembers" SG_ 1036 P05_ECT "ECT";
+BA_ "SourceMembers" SG_ 1036 P04_rsvd0 "rsvd0,P04_RESERVED_19";
+BA_ "SourceMembers" SG_ 1036 P03_IDENTIFICATIONEXTRABYTE_TBD_ "IDENTIFICATIONEXTRABYTE_TBD_13";
+BA_ "SystemSignalLongSymbol" SG_ 1036 P03_IDENTIFICATIONEXTRABYTE_TBD_ "P03_IDENTIFICATIONEXTRABYTE_TBD_13";
+BA_ "SourceMembers" SG_ 1036 P02_VIN_CHARACTERS_7__12_11_B6 "VIN_CHARACTERS_7__12_11_B6";
+BA_ "SourceMembers" SG_ 1036 P01_VIN_CHARACTERS_1__6_10_B6 "VIN_CHARACTERS_1__6_10_B6";
+BA_ "SourceMembers" SG_ 1036 P00_rsvd1_Byte1 "rsvd1";
+BA_ "SourceMembers" SG_ 1036 P0F_rsvd3 "rsvd3,P0F_RESERVED_63_B5";
+BA_ "SourceMembers" SG_ 1036 P0D_CMDEQRAT "CMDEQRAT";
+BA_ "SourceMembers" SG_ 1036 P0C_TOUT "TOUT";
+BA_ "SourceMembers" SG_ 1036 P0B_rsvd2 "rsvd2,P0B_RESERVED_51_B5";
+BA_ "SourceMembers" SG_ 1036 P0A_KLAF "KLAF";
+BA_ "SourceMembers" SG_ 1036 P09_THICMD "THICMD";
+BA_ "SourceMembers" SG_ 1036 P08_RELTHW "RELTHW";
+BA_ "SourceMembers" SG_ 1036 P07_APPS1 "APPS1";
+BA_ "SourceMembers" SG_ 1036 P06_PA "PA";
+BA_ "SourceMembers" SG_ 1036 P05_TW "TW";
+BA_ "SourceMembers" SG_ 1036 P04_ECUID5 "ECUID5";
+BA_ "SourceMembers" SG_ 1036 P03_VIN_CHARACTERS_13__17_12_B5 "VIN_CHARACTERS_13__17_12_B5";
+BA_ "SourceMembers" SG_ 1036 P02_VIN_CHARACTERS_7__12_11_B5 "VIN_CHARACTERS_7__12_11_B5";
+BA_ "SourceMembers" SG_ 1036 P01_VIN_CHARACTERS_1__6_10_B5 "VIN_CHARACTERS_1__6_10_B5";
+BA_ "SourceMembers" SG_ 1036 P00_rsvd1_Byte0 "rsvd1";
+BA_ "SourceMembers" SG_ 1036 P0F_rsvd2 "rsvd2,P0F_RESERVED_63_B4";
+BA_ "SourceMembers" SG_ 1036 P0E_ENGINE_RUNTIME_RAW "ENGINE_RUNTIME_RAW";
+BA_ "SourceMembers" SG_ 1036 P0D_AFM "AFM";
+BA_ "SourceMembers" SG_ 1036 P0C_rsvd3 "rsvd3,P0C_RESERVED_52_B4";
+BA_ "SourceMembers" SG_ 1036 P0B_rsvd1 "rsvd1,P0B_RESERVED_51_B4";
+BA_ "SourceMembers" SG_ 1036 P09_THROTTLE_AN45_BASELINE_RAW "THROTTLE_AN45_BASELINE_RAW";
+BA_ "SourceMembers" SG_ 1036 P08_TH_2 "TH_2";
+BA_ "SourceMembers" SG_ 1036 P07_CONTROL_MODULE_VOLTAGE_CLAMP "CONTROL_MODULE_VOLTAGE_CLAMPED_RAW";
+BA_ "SystemSignalLongSymbol" SG_ 1036 P07_CONTROL_MODULE_VOLTAGE_CLAMP "P07_CONTROL_MODULE_VOLTAGE_CLAMPED_RAW";
+BA_ "SourceMembers" SG_ 1036 P06_MAP "MAP";
+BA_ "SourceMembers" SG_ 1036 P05_RELTH "RELTH";
+BA_ "SourceMembers" SG_ 1036 P04_ECUID4 "ECUID4";
+BA_ "SourceMembers" SG_ 1036 P03_VIN_CHARACTERS_13__17_12_B4 "VIN_CHARACTERS_13__17_12_B4";
+BA_ "SourceMembers" SG_ 1036 P02_VIN_CHARACTERS_7__12_11_B4 "VIN_CHARACTERS_7__12_11_B4";
+BA_ "SourceMembers" SG_ 1036 P01_VIN_CHARACTERS_1__6_10_B4 "VIN_CHARACTERS_1__6_10_B4";
+BA_ "SourceMembers" SG_ 1036 P00_FORMATORLENGTHCODE_6 "FORMATORLENGTHCODE_6";
+BA_ "SourceMembers" SG_ 1036 P0F_rsvd1 "rsvd1,P0F_RESERVED_63_B3";
+BA_ "SourceMembers" SG_ 1036 P0E_VTCANGL "VTCANGL";
+BA_ "SourceMembers" SG_ 1036 P0C_rsvd2 "rsvd2,P0C_RESERVED_52_B3";
+BA_ "SourceMembers" SG_ 1036 P0B_rsvd0 "rsvd0,P0B_RESERVED_51_B3";
+BA_ "SourceMembers" SG_ 1036 P0A_LAMBDA "LAMBDA";
+BA_ "SourceMembers" SG_ 1036 P09_THROTTLE_AN12_BASELINE_RAW "THROTTLE_AN12_BASELINE_RAW";
+BA_ "SourceMembers" SG_ 1036 P08_TH_1 "TH_1";
+BA_ "SourceMembers" SG_ 1036 P07_IG "IG";
+BA_ "SourceMembers" SG_ 1036 P06_PB "PB";
+BA_ "SourceMembers" SG_ 1036 P05_ABSTH "ABSTH";
+BA_ "SourceMembers" SG_ 1036 P04_ECUID3 "ECUID3";
+BA_ "SourceMembers" SG_ 1036 P03_VIN_CHARACTERS_13__17_12_B3 "VIN_CHARACTERS_13__17_12_B3";
+BA_ "SourceMembers" SG_ 1036 P02_VIN_CHARACTERS_7__12_11_B3 "VIN_CHARACTERS_7__12_11_B3";
+BA_ "SourceMembers" SG_ 1036 P01_VIN_CHARACTERS_1__6_10_B3 "VIN_CHARACTERS_1__6_10_B3";
+BA_ "SourceMembers" SG_ 1036 P0F_rsvd0 "rsvd0,P0F_RESERVED_63_B2";
+BA_ "SourceMembers" SG_ 1036 P0D_XILAF "XILAF";
+BA_ "SourceMembers" SG_ 1036 P0C_rsvd1 "rsvd1,P0C_RESERVED_52_B2";
+BA_ "SourceMembers" SG_ 1036 P0B_SVO2 "SVO2";
+BA_ "SourceMembers" SG_ 1036 P0A_rsvd0_Byte1 "rsvd0";
+BA_ "SourceMembers" SG_ 1036 P07_CLV "CLV";
+BA_ "SourceMembers" SG_ 1036 P06_IAT "IAT";
+BA_ "SourceMembers" SG_ 1036 P04_ECUID2 "ECUID2";
+BA_ "SourceMembers" SG_ 1036 P03_VIN_CHARACTERS_13__17_12_B2 "VIN_CHARACTERS_13__17_12_B2";
+BA_ "SourceMembers" SG_ 1036 P02_VIN_CHARACTERS_7__12_11_B2 "VIN_CHARACTERS_7__12_11_B2";
+BA_ "SourceMembers" SG_ 1036 P01_VIN_CHARACTERS_1__6_10_B2 "VIN_CHARACTERS_1__6_10_B2";
+BA_ "SourceMembers" SG_ 1036 P00_DIAGNOSTICEVENTORFREEZEDTCCO "DIAGNOSTICEVENTORFREEZEDTCCODE_5";
+BA_ "SystemSignalLongSymbol" SG_ 1036 P00_DIAGNOSTICEVENTORFREEZEDTCCO "P00_DIAGNOSTICEVENTORFREEZEDTCCODE_5";
+BA_ "SourceMembers" SG_ 1036 P0F_FLI "FLI";
+BA_ "SourceMembers" SG_ 1036 P0E_GAIR "GAIR";
+BA_ "SourceMembers" SG_ 1036 P0D_rsvd0 "rsvd0,P0D_RESERVED_54";
+BA_ "SourceMembers" SG_ 1036 P0C_rsvd0 "rsvd0,P0C_RESERVED_52_B1";
+BA_ "SourceMembers" SG_ 1036 P0B_FSS "FSS";
+BA_ "SourceMembers" SG_ 1036 P0A_rsvd0_Byte0 "rsvd0";
+BA_ "SourceMembers" SG_ 1036 P09_THO "THO";
+BA_ "SourceMembers" SG_ 1036 P08_APP "APP";
+BA_ "SourceMembers" SG_ 1036 P07_VSP "VSP";
+BA_ "SourceMembers" SG_ 1036 P06_TA "TA";
+BA_ "SourceMembers" SG_ 1036 P05_NE "NE";
+BA_ "SourceMembers" SG_ 1036 P04_ECUID1 "ECUID1";
+BA_ "SourceMembers" SG_ 1036 P03_VIN_CHARACTERS_13__17_12_B1 "VIN_CHARACTERS_13__17_12_B1";
+BA_ "SourceMembers" SG_ 1036 P02_VIN_CHARACTERS_7__12_11_B1 "VIN_CHARACTERS_7__12_11_B1";
+BA_ "SourceMembers" SG_ 1036 P01_VIN_CHARACTERS_1__6_10_B1 "VIN_CHARACTERS_1__6_10_B1";
+BA_ "SourceMembers" SG_ 1036 P00_rsvd0 "rsvd0,P00_RESERVED_4";
+BA_ "SourceMembers" SG_ 1039 P07_ATPFWD "ATPFWD";
+BA_ "SourceMembers" SG_ 1039 P05_SCS "SCS";
+BA_ "SourceMembers" SG_ 1039 P07_ATPRVS "ATPRVS";
+BA_ "SourceMembers" SG_ 1039 P05_BRKSW "BRKSW";
+BA_ "SourceMembers" SG_ 1039 P03_STNTDBF "STNTDBF";
+BA_ "SourceMembers" SG_ 1039 P07_rsvd4 "rsvd4";
+BA_ "SourceMembers" SG_ 1039 P03_STVELDBF "STVELDBF";
+BA_ "SourceMembers" SG_ 1039 P07_PPIN "PPIN";
+BA_ "SourceMembers" SG_ 1039 P03_DECFC "DECFC";
+BA_ "SourceMembers" SG_ 1039 P03_CLPMOD "CLPMOD";
+BA_ "SourceMembers" SG_ 1039 UnspecifiedPage_rsvd5 "rsvd5";
+BA_ "SourceMembers" SG_ 1039 P07_rsvd3 "rsvd3";
+BA_ "SourceMembers" SG_ 1039 P06_IACTLCC "IACTLCC";
+BA_ "SourceMembers" SG_ 1039 P05_rsvd0 "rsvd0";
+BA_ "SourceMembers" SG_ 1039 P04_VB "VB";
+BA_ "SourceMembers" SG_ 1039 P03_STNDRDBF "STNDRDBF";
+BA_ "SourceMembers" SG_ 1039 P01_PAGE1_B6_RAW "PAGE1_B6_RAW";
+BA_ "SourceMembers" SG_ 1039 P07_ATPP "ATPP";
+BA_ "SourceMembers" SG_ 1039 P07_ATPR "ATPR";
+BA_ "SourceMembers" SG_ 1039 P07_ATPN "ATPN";
+BA_ "SourceMembers" SG_ 1039 P07_ATPD "ATPD";
+BA_ "SourceMembers" SG_ 1039 P07_ATPS "ATPS";
+BA_ "SourceMembers" SG_ 1039 P07_ATPL "ATPL";
+BA_ "SourceMembers" SG_ 1039 UnspecifiedPage_rsvd4 "rsvd4";
+BA_ "SourceMembers" SG_ 1039 P07_rsvd2 "rsvd2";
+BA_ "SourceMembers" SG_ 1039 P06_ICMDLCC "ICMDLCC";
+BA_ "SourceMembers" SG_ 1039 P05_NEOP "NEOP";
+BA_ "SourceMembers" SG_ 1039 P04_TWAD "TWAD";
+BA_ "SourceMembers" SG_ 1039 P03_VSP "VSP";
+BA_ "SourceMembers" SG_ 1039 P02_NDR "NDR";
+BA_ "SourceMembers" SG_ 1039 P01_PAGE1_B5_RAW "PAGE1_B5_RAW";
+BA_ "SourceMembers" SG_ 1039 P00_PAGE0_B5_RAW "PAGE0_B5_RAW";
+BA_ "SourceMembers" SG_ 1039 P07_SLS "SLS";
+BA_ "SourceMembers" SG_ 1039 P07_INHSOL "INHSOL";
+BA_ "SourceMembers" SG_ 1039 UnspecifiedPage_rsvd3 "rsvd3";
+BA_ "SourceMembers" SG_ 1039 P07_rsvd1 "rsvd1";
+BA_ "SourceMembers" SG_ 1039 P06_IACTDN "IACTDN";
+BA_ "SourceMembers" SG_ 1039 P05_LONACAD "LONACAD";
+BA_ "SourceMembers" SG_ 1039 P04_THAD1 "THAD1";
+BA_ "SourceMembers" SG_ 1039 P03_VLVABS "VLVABS";
+BA_ "SourceMembers" SG_ 1039 P01_PAGE1_B4_RAW "PAGE1_B4_RAW";
+BA_ "SourceMembers" SG_ 1039 P00_PAGE0_B4_RAW "PAGE0_B4_RAW";
+BA_ "SourceMembers" SG_ 1039 P07_SHA "SHA";
+BA_ "SourceMembers" SG_ 1039 P07_SHB "SHB";
+BA_ "SourceMembers" SG_ 1039 P07_SHO_P "SHO_P";
+BA_ "SourceMembers" SG_ 1039 UnspecifiedPage_rsvd2 "rsvd2";
+BA_ "SourceMembers" SG_ 1039 P07_rsvd0 "rsvd0";
+BA_ "SourceMembers" SG_ 1039 P06_ICMDDN "ICMDDN";
+BA_ "SourceMembers" SG_ 1039 P05_PDNAD "PDNAD";
+BA_ "SourceMembers" SG_ 1039 P04_PBAD "PBAD";
+BA_ "SourceMembers" SG_ 1039 P03_VLVEL1 "VLVEL1";
+BA_ "SourceMembers" SG_ 1039 P02_NT "NT";
+BA_ "SourceMembers" SG_ 1039 P01_PAGE1_B3_RAW "PAGE1_B3_RAW";
+BA_ "SourceMembers" SG_ 1039 UnspecifiedPage_rsvd1 "rsvd1";
+BA_ "SourceMembers" SG_ 1039 P07_IACTCPC "IACTCPC";
+BA_ "SourceMembers" SG_ 1039 P06_IACTDR "IACTDR";
+BA_ "SourceMembers" SG_ 1039 P05_TATFAD "TATFAD";
+BA_ "SourceMembers" SG_ 1039 P04_PAAD "PAAD";
+BA_ "SourceMembers" SG_ 1039 P01_PAGE1_B2_RAW "PAGE1_B2_RAW";
+BA_ "SourceMembers" SG_ 1039 P00_FRZDTC "FRZDTC";
+BA_ "SourceMembers" SG_ 1039 UnspecifiedPage_rsvd0 "rsvd0";
+BA_ "SourceMembers" SG_ 1039 P07_ICMDCPC "ICMDCPC";
+BA_ "SourceMembers" SG_ 1039 P06_ICMDDR "ICMDDR";
+BA_ "SourceMembers" SG_ 1039 P05_APSAT "APSAT";
+BA_ "SourceMembers" SG_ 1039 P04_TA "TA";
+BA_ "SourceMembers" SG_ 1039 P03_NDN "NDN";
+BA_ "SourceMembers" SG_ 1039 P02_NEW "NEW";
+BA_ "SourceMembers" SG_ 1039 P01_PAGE1_B1_RAW "PAGE1_B1_RAW";
+BA_ "SourceMembers" SG_ 1039 P00_PAGE0_B1_RAW "PAGE0_B1_RAW";
+BA_ "SourceMembers" SG_ 1057 COUNTER "counter_2bit";
+BA_ "SourceMembers" SG_ 1057 CHECKSUM "checksum_nibble";
+BA_ "SourceMembers" SG_ 1064 SecondaryDistanceCounterRaw_0001 "SecondaryDistanceCounterRawTBD";
+BA_ "SystemSignalLongSymbol" SG_ 1064 SecondaryDistanceCounterRaw_0001 "SecondaryDistanceCounterRawTBD_Byte2";
+BA_ "SourceMembers" SG_ 1064 SecondaryDistanceCounterRaw_0000 "SecondaryDistanceCounterRawTBD";
+BA_ "SystemSignalLongSymbol" SG_ 1064 SecondaryDistanceCounterRaw_0000 "SecondaryDistanceCounterRawTBD_Byte1";
+BA_ "SourceMembers" SG_ 1064 SecondaryDistanceCounterRawTBD_B "SecondaryDistanceCounterRawTBD";
+BA_ "SystemSignalLongSymbol" SG_ 1064 SecondaryDistanceCounterRawTBD_B "SecondaryDistanceCounterRawTBD_Byte0";
+BA_ "SourceMembers" SG_ 1088 P39_d6_bit7 "d6_bit7";
+BA_ "SourceMembers" SG_ 1088 P31_d6_bit7 "d6_bit7";
+BA_ "SourceMembers" SG_ 1088 P31_d6_bit6 "d6_bit6";
+BA_ "SourceMembers" SG_ 1088 P39_unknown2 "unknown2";
+BA_ "SourceMembers" SG_ 1088 P39_d6_bit3 "d6_bit3";
+BA_ "SourceMembers" SG_ 1088 P31_unknown3 "unknown3";
+BA_ "SourceMembers" SG_ 1088 P39_d6_bit2 "d6_bit2";
+BA_ "SourceMembers" SG_ 1088 P39_BDCHGBAT "BDCHGBAT";
+BA_ "SourceMembers" SG_ 1088 UnspecifiedPage_unknown5 "unknown5";
+BA_ "SourceMembers" SG_ 1088 P39_BATSRST "BATSRST";
+BA_ "SourceMembers" SG_ 1088 P33_unknown5 "unknown5";
+BA_ "SourceMembers" SG_ 1088 P31_d6_low3 "d6_low3";
+BA_ "SourceMembers" SG_ 1088 P31_unknown2 "unknown2";
+BA_ "SourceMembers" SG_ 1088 P31_d5_bit6 "d5_bit6";
+BA_ "SourceMembers" SG_ 1088 P31_d5_bit5 "d5_bit5";
+BA_ "SourceMembers" SG_ 1088 P31_d5_mid2 "d5_mid2";
+BA_ "SourceMembers" SG_ 1088 UnspecifiedPage_unknown4 "unknown4";
+BA_ "SourceMembers" SG_ 1088 P3A_raw56 "raw56";
+BA_ "SourceMembers" SG_ 1088 P39_SOFVPBAT "SOFVPBAT,P39_SOFVPBAT_RAW";
+BA_ "SourceMembers" SG_ 1088 P33_unknown4 "unknown4";
+BA_ "SourceMembers" SG_ 1088 P32_raw56 "raw56";
+BA_ "SourceMembers" SG_ 1088 P31_d5_low3 "d5_low3";
+BA_ "SourceMembers" SG_ 1088 UnspecifiedPage_unknown3 "unknown3";
+BA_ "SourceMembers" SG_ 1088 P39_SOHQPBAT "SOHQPBAT,P39_SOHQPBAT_RAW";
+BA_ "SourceMembers" SG_ 1088 P33_unknown3 "unknown3";
+BA_ "SourceMembers" SG_ 1088 P31_SOCPBAT "SOCPBAT,P31_SOCPBAT_RAW";
+BA_ "SourceMembers" SG_ 1088 UnspecifiedPage_unknown2 "unknown2";
+BA_ "SourceMembers" SG_ 1088 P3A_page3A_word34 "page3A_word34";
+BA_ "SourceMembers" SG_ 1088 P39_VBATCO "VBATCO,P39_VBATCO_RAW";
+BA_ "SourceMembers" SG_ 1088 P33_unknown2 "unknown2";
+BA_ "SourceMembers" SG_ 1088 P32_raw34 "raw34";
+BA_ "SourceMembers" SG_ 1088 P31_TPBAT "TPBAT,P31_TPBAT_RAW";
+BA_ "SourceMembers" SG_ 1088 UnspecifiedPage_unknown1 "unknown1";
+BA_ "SourceMembers" SG_ 1088 P3A_unknown0 "unknown0";
+BA_ "SourceMembers" SG_ 1088 P39_unknown1 "unknown1";
+BA_ "SourceMembers" SG_ 1088 P33_unknown1 "unknown1";
+BA_ "SourceMembers" SG_ 1088 P31_unknown1 "unknown1";
+BA_ "SourceMembers" SG_ 1088 UnspecifiedPage_unknown0 "unknown0";
+BA_ "SourceMembers" SG_ 1088 P3A_page3A_temp_word_RAW "page3A_temp_word_RAW";
+BA_ "SourceMembers" SG_ 1088 P39_unknown0 "unknown0";
+BA_ "SourceMembers" SG_ 1088 P33_unknown0 "unknown0";
+BA_ "ExactConversion" SG_ 1088 P32_RCLPBAT "min(floor(min(raw,32767)/10),255)*0.1";
+BA_ "SourceMembers" SG_ 1088 P32_RCLPBAT "RCLPBAT,P32_RCLPBAT_RAW";
+BA_ "DerivedUnit" SG_ 1088 P32_RCLPBAT "mOhm";
+BA_ "SourceMembers" SG_ 1088 P31_unknown0 "unknown0";
+BA_ "SourceMembers" SG_ 1089 unknown6 "Reserved";
+BA_ "SourceMembers" SG_ 1089 COUNTER "RollingCounter";
+BA_ "SourceMembers" SG_ 1089 CHECKSUM "HondaChecksum";
+BA_ "SourceMembers" SG_ 1089 unknown5 "RawBankByte6_TBD";
+BA_ "SourceMembers" SG_ 1089 unknown4 "RawBankByte5_TBD";
+BA_ "SourceMembers" SG_ 1089 unknown3 "RawBankByte4_TBD";
+BA_ "SourceMembers" SG_ 1089 unknown2 "RawBankByte3_TBD";
+BA_ "SourceMembers" SG_ 1089 unknown1 "RawBankByte2_TBD";
+BA_ "SourceMembers" SG_ 1089 unknown0 "RawBankByte1_TBD";
+BA_ "SourceMembers" SG_ 1108 STATUS_BIT_2_TBD "STATUS_B6_2_RAW";
+BA_ "SourceMembers" SG_ 1108 STATUS_BIT_1_TBD "STATUS_B6_1_RAW";
+BA_ "SystemSignalLongSymbol" SG_ 1108 BAROMETRIC_SENSOR_FAULT_AGGREGAT "BAROMETRIC_SENSOR_FAULT_AGGREGATE";
+BA_ "SourceMembers" SG_ 1108 BARO "BARO_DERIVED_RAW";
+BA_ "SourceMembers" SG_ 1125 COUNTER "RollingCounter";
+BA_ "SourceMembers" SG_ 1125 CHECKSUM "HondaChecksum";
+BA_ "SourceMembers" SG_ 1125 rsvd0_Byte5 "rsvd0";
+BA_ "SourceMembers" SG_ 1125 rsvd0_Byte4 "rsvd0";
+BA_ "SourceMembers" SG_ 1125 rsvd0_Byte3 "rsvd0";
+BA_ "SourceMembers" SG_ 1125 rsvd0_Byte2 "rsvd0";
+BA_ "SourceMembers" SG_ 1125 rsvd0_Byte1 "rsvd0";
+BA_ "SourceMembers" SG_ 1125 rsvd0_Byte0 "rsvd0";
+BA_ "SourceMembers" SG_ 1296 STATUS_BIT_1_TBD "SingleBitStatusD2Bit7TBD";
+BA_ "SourceMembers" SG_ 1365 unknown0_Byte4 "unknown0";
+BA_ "SourceMembers" SG_ 1365 unknown0_Byte3 "unknown0";
+BA_ "SourceMembers" SG_ 1365 unknown0_Byte2 "unknown0";
+BA_ "SourceMembers" SG_ 1365 unknown0_Byte1 "unknown0";
+BA_ "SourceMembers" SG_ 1365 unknown0_Byte0 "unknown0";
+VAL_ 145 ScalarNotReady 1 "not ready" ;
+VAL_ 316 CLSWCC 0 "OPEN" 1 "CLOSE" ;
+VAL_ 316 TORQUE_STATE 0 "Normal" 1 "VsaControlCandidate" 2 "FuelCut" 3 "Unknown" ;
+VAL_ 380 BKSWNC 0 "CLOSE" 1 "OPEN" ;
+VAL_ 380 ISSTAT 0 "Uncontrolled" 1 "Controlled" ;
+VAL_ 380 CRPL 0 "OFF" 1 "ON" ;
+VAL_ 380 MILSTAT 0 "OFF" 1 "ON" ;
+VAL_ 380 WARN 0 "OFF" 1 "ON" ;
+VAL_ 380 BKSW 0 "OFF" 1 "ON" ;
+VAL_ 401 CvtControlScheduleCode 17 "manual (16 + gear step 1..7)" 18 "manual (16 + gear step 1..7)" 19 "manual (16 + gear step 1..7)" 20 "manual (16 + gear step 1..7)" 21 "manual (16 + gear step 1..7)" 22 "manual (16 + gear step 1..7)" 23 "manual (16 + gear step 1..7)" 33 "alt manual: 32 + gear step 1..7." 34 "alt manual: 32 + gear step 1..7." 35 "alt manual: 32 + gear step 1..7." 36 "alt manual: 32 + gear step 1..7." 37 "alt manual: 32 + gear step 1..7." 38 "alt manual: 32 + gear step 1..7." 39 "alt manual: 32 + gear step 1..7." 81 "override branch" 90 "override branch" 127 "fault-latch override" ;
+VAL_ 401 RangeDisplay 0 "blank" 1 "P" 2 "R" 3 "N" 4 "D" 6 "unresolved" 7 "L" 8 "unresolved" 10 "S (0x0A)" 15 "all segments" ;
+VAL_ 401 MIND 0 "OFF" 1 "ON" ;
+VAL_ 401 ECOIND 0 "OFF" 1 "ON" ;
+VAL_ 401 LEDA 0 "OFF" 1 "ON" ;
+VAL_ 401 LEDB 0 "OFF" 1 "ON" ;
+VAL_ 401 LEDC 0 "OFF" 1 "ON" ;
+VAL_ 401 ATPL 0 "OFF" 1 "ON" ;
+VAL_ 401 ATPS 0 "OFF" 1 "ON" ;
+VAL_ 401 ATPD 0 "OFF" 1 "ON" ;
+VAL_ 401 ATPN 0 "OFF" 1 "ON" ;
+VAL_ 401 ATPR 0 "OFF" 1 "ON" ;
+VAL_ 401 ATPP 0 "OFF" 1 "ON" ;
+VAL_ 420 VSACASEN 0 "Normal" 1 "INHIBITED" ;
+VAL_ 422 CCSW 0 "Default" 1 "MainSwitch" 2 "CancelSwitch" 3 "SetSwitch" 4 "ResumeSwitch" 5 "Unknown" 6 "SignalLost" 7 "SignalShort" ;
+VAL_ 426 ISINFVSA 0 "Normal" 1 "INHIBITED" ;
+VAL_ 426 ISINFISAB 0 "INHIBITED" 1 "Normal" ;
+VAL_ 476 FCAPOPEN 0 "CLOSE" 1 "OPEN" ;
+VAL_ 545 ECONO 0 "Off" 3 "On" ;
+VAL_ 800 VTECIND 0 "OFF" 1 "ON" ;
+VAL_ 804 IMMOBILIZER_REPORTING_CODE 0 "CompleteAccepted" 1 "Incomplete" 2 "CompleteNotAccepted" ;
+VAL_ 804 SCS 0 "OPEN" 1 "SHORT" ;
+VAL_ 804 IAT 255 "invalid" ;
+VAL_ 804 ECT 255 "invalid" ;
+VAL_ 871 IBATSTATUS 0 "Normal condition" 1 "Circuit open failure" ;
+VAL_ 882 ISINFHSW 0 "Normal" 1 "INHIBITED" ;
+VAL_ 983 PageIndex 0 "Slots0To2" 1 "Slots3To5" ;
+VAL_ 1024 MILSTAT 0 "OFF" 1 "ON" ;
+VAL_ 1036 P0B_FSS 0 "None" 1 "OL_COND" 2 "CLOSED" 4 "OL_DRV" 8 "OL_DTC" 16 "CL_O2SX" ;
+VAL_ 1039 P07_ATPFWD 0 "OFF" 1 "ON" ;
+VAL_ 1039 P05_SCS 0 "OPEN" 1 "SHORT" ;
+VAL_ 1039 P07_ATPRVS 0 "OFF" 1 "ON" ;
+VAL_ 1039 P05_BRKSW 0 "OFF" 1 "ON" ;
+VAL_ 1039 P03_STNTDBF 0 "Stop" 1 "NormalRotation" 2 "InverseRotation" 3 "NotAvailable" ;
+VAL_ 1039 P03_STVELDBF 0 "Stop" 1 "Forward" 2 "Reverse" 3 "NotAvailable" ;
+VAL_ 1039 P07_PPIN 0 "OFF" 1 "ON" ;
+VAL_ 1039 P03_DECFC 0 "Other" 1 "Fuelcut" ;
+VAL_ 1039 P03_CLPMOD 0 "Other" 1 "NonCreep" ;
+VAL_ 1039 P03_STNDRDBF 0 "Stop" 1 "Forward" 2 "Reverse" 3 "NotAvailable" ;
+VAL_ 1039 P07_ATPP 0 "OFF" 1 "ON" ;
+VAL_ 1039 P07_ATPR 0 "OFF" 1 "ON" ;
+VAL_ 1039 P07_ATPN 0 "OFF" 1 "ON" ;
+VAL_ 1039 P07_ATPD 0 "OFF" 1 "ON" ;
+VAL_ 1039 P07_ATPS 0 "OFF" 1 "ON" ;
+VAL_ 1039 P07_ATPL 0 "OFF" 1 "ON" ;
+VAL_ 1039 P07_SLS 0 "OFF" 1 "ON" ;
+VAL_ 1039 P07_INHSOL 0 "OFF" 1 "ON" ;
+VAL_ 1039 P07_SHA 0 "OFF" 1 "ON" ;
+VAL_ 1039 P07_SHB 0 "OFF" 1 "ON" ;
+VAL_ 1125 AMBIENT_ECO_ASSIST_MODE 1 "White" 2 "LightGreen" 3 "Green" ;
+
+
+SG_MUL_VAL_ 983 RetainedBankACodeWord0_Page0 PageIndex 0-0;
+SG_MUL_VAL_ 983 RetainedBankACodeWord0_Page1 PageIndex 1-1;
+SG_MUL_VAL_ 983 RetainedBankACodeWord1_Page0 PageIndex 0-0;
+SG_MUL_VAL_ 983 RetainedBankACodeWord1_Page1 PageIndex 1-1;
+SG_MUL_VAL_ 983 RetainedBankACodeWord2_Page0 PageIndex 0-0;
+SG_MUL_VAL_ 983 RetainedBankACodeWord2_Page1 PageIndex 1-1;
+SG_MUL_VAL_ 1036 P00_rsvd0 MULTIPLEX_PAGE 0-0;
+SG_MUL_VAL_ 1036 P01_VIN_CHARACTERS_1__6_10_B1 MULTIPLEX_PAGE 1-1;
+SG_MUL_VAL_ 1036 P02_VIN_CHARACTERS_7__12_11_B1 MULTIPLEX_PAGE 2-2;
+SG_MUL_VAL_ 1036 P03_VIN_CHARACTERS_13__17_12_B1 MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1036 P04_ECUID1 MULTIPLEX_PAGE 4-4;
+SG_MUL_VAL_ 1036 P05_NE MULTIPLEX_PAGE 5-5;
+SG_MUL_VAL_ 1036 P06_TA MULTIPLEX_PAGE 6-6;
+SG_MUL_VAL_ 1036 P07_VSP MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1036 P08_APP MULTIPLEX_PAGE 8-8;
+SG_MUL_VAL_ 1036 P09_THO MULTIPLEX_PAGE 9-9;
+SG_MUL_VAL_ 1036 P0A_rsvd0_Byte0 MULTIPLEX_PAGE 10-10;
+SG_MUL_VAL_ 1036 P0B_FSS MULTIPLEX_PAGE 11-11;
+SG_MUL_VAL_ 1036 P0C_rsvd0 MULTIPLEX_PAGE 12-12;
+SG_MUL_VAL_ 1036 P0D_rsvd0 MULTIPLEX_PAGE 13-13;
+SG_MUL_VAL_ 1036 P0E_GAIR MULTIPLEX_PAGE 14-14;
+SG_MUL_VAL_ 1036 P0F_FLI MULTIPLEX_PAGE 15-15;
+SG_MUL_VAL_ 1036 P00_DIAGNOSTICEVENTORFREEZEDTCCO MULTIPLEX_PAGE 0-0;
+SG_MUL_VAL_ 1036 P01_VIN_CHARACTERS_1__6_10_B2 MULTIPLEX_PAGE 1-1;
+SG_MUL_VAL_ 1036 P02_VIN_CHARACTERS_7__12_11_B2 MULTIPLEX_PAGE 2-2;
+SG_MUL_VAL_ 1036 P03_VIN_CHARACTERS_13__17_12_B2 MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1036 P04_ECUID2 MULTIPLEX_PAGE 4-4;
+SG_MUL_VAL_ 1036 P06_IAT MULTIPLEX_PAGE 6-6;
+SG_MUL_VAL_ 1036 P07_CLV MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1036 P0A_rsvd0_Byte1 MULTIPLEX_PAGE 10-10;
+SG_MUL_VAL_ 1036 P0B_SVO2 MULTIPLEX_PAGE 11-11;
+SG_MUL_VAL_ 1036 P0C_rsvd1 MULTIPLEX_PAGE 12-12;
+SG_MUL_VAL_ 1036 P0D_XILAF MULTIPLEX_PAGE 13-13;
+SG_MUL_VAL_ 1036 P0F_rsvd0 MULTIPLEX_PAGE 15-15;
+SG_MUL_VAL_ 1036 P01_VIN_CHARACTERS_1__6_10_B3 MULTIPLEX_PAGE 1-1;
+SG_MUL_VAL_ 1036 P02_VIN_CHARACTERS_7__12_11_B3 MULTIPLEX_PAGE 2-2;
+SG_MUL_VAL_ 1036 P03_VIN_CHARACTERS_13__17_12_B3 MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1036 P04_ECUID3 MULTIPLEX_PAGE 4-4;
+SG_MUL_VAL_ 1036 P05_ABSTH MULTIPLEX_PAGE 5-5;
+SG_MUL_VAL_ 1036 P06_PB MULTIPLEX_PAGE 6-6;
+SG_MUL_VAL_ 1036 P07_IG MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1036 P08_TH_1 MULTIPLEX_PAGE 8-8;
+SG_MUL_VAL_ 1036 P09_THROTTLE_AN12_BASELINE_RAW MULTIPLEX_PAGE 9-9;
+SG_MUL_VAL_ 1036 P0A_LAMBDA MULTIPLEX_PAGE 10-10;
+SG_MUL_VAL_ 1036 P0B_rsvd0 MULTIPLEX_PAGE 11-11;
+SG_MUL_VAL_ 1036 P0C_rsvd2 MULTIPLEX_PAGE 12-12;
+SG_MUL_VAL_ 1036 P0E_VTCANGL MULTIPLEX_PAGE 14-14;
+SG_MUL_VAL_ 1036 P0F_rsvd1 MULTIPLEX_PAGE 15-15;
+SG_MUL_VAL_ 1036 P00_FORMATORLENGTHCODE_6 MULTIPLEX_PAGE 0-0;
+SG_MUL_VAL_ 1036 P01_VIN_CHARACTERS_1__6_10_B4 MULTIPLEX_PAGE 1-1;
+SG_MUL_VAL_ 1036 P02_VIN_CHARACTERS_7__12_11_B4 MULTIPLEX_PAGE 2-2;
+SG_MUL_VAL_ 1036 P03_VIN_CHARACTERS_13__17_12_B4 MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1036 P04_ECUID4 MULTIPLEX_PAGE 4-4;
+SG_MUL_VAL_ 1036 P05_RELTH MULTIPLEX_PAGE 5-5;
+SG_MUL_VAL_ 1036 P06_MAP MULTIPLEX_PAGE 6-6;
+SG_MUL_VAL_ 1036 P07_CONTROL_MODULE_VOLTAGE_CLAMP MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1036 P08_TH_2 MULTIPLEX_PAGE 8-8;
+SG_MUL_VAL_ 1036 P09_THROTTLE_AN45_BASELINE_RAW MULTIPLEX_PAGE 9-9;
+SG_MUL_VAL_ 1036 P0B_rsvd1 MULTIPLEX_PAGE 11-11;
+SG_MUL_VAL_ 1036 P0C_rsvd3 MULTIPLEX_PAGE 12-12;
+SG_MUL_VAL_ 1036 P0D_AFM MULTIPLEX_PAGE 13-13;
+SG_MUL_VAL_ 1036 P0E_ENGINE_RUNTIME_RAW MULTIPLEX_PAGE 14-14;
+SG_MUL_VAL_ 1036 P0F_rsvd2 MULTIPLEX_PAGE 15-15;
+SG_MUL_VAL_ 1036 P00_rsvd1_Byte0 MULTIPLEX_PAGE 0-0;
+SG_MUL_VAL_ 1036 P01_VIN_CHARACTERS_1__6_10_B5 MULTIPLEX_PAGE 1-1;
+SG_MUL_VAL_ 1036 P02_VIN_CHARACTERS_7__12_11_B5 MULTIPLEX_PAGE 2-2;
+SG_MUL_VAL_ 1036 P03_VIN_CHARACTERS_13__17_12_B5 MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1036 P04_ECUID5 MULTIPLEX_PAGE 4-4;
+SG_MUL_VAL_ 1036 P05_TW MULTIPLEX_PAGE 5-5;
+SG_MUL_VAL_ 1036 P06_PA MULTIPLEX_PAGE 6-6;
+SG_MUL_VAL_ 1036 P07_APPS1 MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1036 P08_RELTHW MULTIPLEX_PAGE 8-8;
+SG_MUL_VAL_ 1036 P09_THICMD MULTIPLEX_PAGE 9-9;
+SG_MUL_VAL_ 1036 P0A_KLAF MULTIPLEX_PAGE 10-10;
+SG_MUL_VAL_ 1036 P0B_rsvd2 MULTIPLEX_PAGE 11-11;
+SG_MUL_VAL_ 1036 P0C_TOUT MULTIPLEX_PAGE 12-12;
+SG_MUL_VAL_ 1036 P0D_CMDEQRAT MULTIPLEX_PAGE 13-13;
+SG_MUL_VAL_ 1036 P0F_rsvd3 MULTIPLEX_PAGE 15-15;
+SG_MUL_VAL_ 1036 P00_rsvd1_Byte1 MULTIPLEX_PAGE 0-0;
+SG_MUL_VAL_ 1036 P01_VIN_CHARACTERS_1__6_10_B6 MULTIPLEX_PAGE 1-1;
+SG_MUL_VAL_ 1036 P02_VIN_CHARACTERS_7__12_11_B6 MULTIPLEX_PAGE 2-2;
+SG_MUL_VAL_ 1036 P03_IDENTIFICATIONEXTRABYTE_TBD_ MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1036 P04_rsvd0 MULTIPLEX_PAGE 4-4;
+SG_MUL_VAL_ 1036 P05_ECT MULTIPLEX_PAGE 5-5;
+SG_MUL_VAL_ 1036 P06_BARO MULTIPLEX_PAGE 6-6;
+SG_MUL_VAL_ 1036 P07_APPS2 MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1036 P0A_KLAFAVE MULTIPLEX_PAGE 10-10;
+SG_MUL_VAL_ 1036 P0B_rsvd3 MULTIPLEX_PAGE 11-11;
+SG_MUL_VAL_ 1036 P0E_DPCS MULTIPLEX_PAGE 14-14;
+SG_MUL_VAL_ 1036 P0F_rsvd4 MULTIPLEX_PAGE 15-15;
+SG_MUL_VAL_ 1039 P00_PAGE0_B1_RAW MULTIPLEX_PAGE 0-0;
+SG_MUL_VAL_ 1039 P01_PAGE1_B1_RAW MULTIPLEX_PAGE 1-1;
+SG_MUL_VAL_ 1039 P02_NEW MULTIPLEX_PAGE 2-2;
+SG_MUL_VAL_ 1039 P03_NDN MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1039 P04_TA MULTIPLEX_PAGE 4-4;
+SG_MUL_VAL_ 1039 P05_APSAT MULTIPLEX_PAGE 5-5;
+SG_MUL_VAL_ 1039 P06_ICMDDR MULTIPLEX_PAGE 6-6;
+SG_MUL_VAL_ 1039 P07_ICMDCPC MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 UnspecifiedPage_rsvd0 MULTIPLEX_PAGE 8-15;
+SG_MUL_VAL_ 1039 P00_FRZDTC MULTIPLEX_PAGE 0-0;
+SG_MUL_VAL_ 1039 P01_PAGE1_B2_RAW MULTIPLEX_PAGE 1-1;
+SG_MUL_VAL_ 1039 P04_PAAD MULTIPLEX_PAGE 4-4;
+SG_MUL_VAL_ 1039 P05_TATFAD MULTIPLEX_PAGE 5-5;
+SG_MUL_VAL_ 1039 P06_IACTDR MULTIPLEX_PAGE 6-6;
+SG_MUL_VAL_ 1039 P07_IACTCPC MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 UnspecifiedPage_rsvd1 MULTIPLEX_PAGE 8-15;
+SG_MUL_VAL_ 1039 P01_PAGE1_B3_RAW MULTIPLEX_PAGE 1-1;
+SG_MUL_VAL_ 1039 P02_NT MULTIPLEX_PAGE 2-2;
+SG_MUL_VAL_ 1039 P03_VLVEL1 MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1039 P04_PBAD MULTIPLEX_PAGE 4-4;
+SG_MUL_VAL_ 1039 P05_PDNAD MULTIPLEX_PAGE 5-5;
+SG_MUL_VAL_ 1039 P06_ICMDDN MULTIPLEX_PAGE 6-6;
+SG_MUL_VAL_ 1039 P07_rsvd0 MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 UnspecifiedPage_rsvd2 MULTIPLEX_PAGE 8-15;
+SG_MUL_VAL_ 1039 P07_SHO_P MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P07_SHB MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P07_SHA MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P00_PAGE0_B4_RAW MULTIPLEX_PAGE 0-0;
+SG_MUL_VAL_ 1039 P01_PAGE1_B4_RAW MULTIPLEX_PAGE 1-1;
+SG_MUL_VAL_ 1039 P03_VLVABS MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1039 P04_THAD1 MULTIPLEX_PAGE 4-4;
+SG_MUL_VAL_ 1039 P05_LONACAD MULTIPLEX_PAGE 5-5;
+SG_MUL_VAL_ 1039 P06_IACTDN MULTIPLEX_PAGE 6-6;
+SG_MUL_VAL_ 1039 P07_rsvd1 MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 UnspecifiedPage_rsvd3 MULTIPLEX_PAGE 8-15;
+SG_MUL_VAL_ 1039 P07_INHSOL MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P07_SLS MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P00_PAGE0_B5_RAW MULTIPLEX_PAGE 0-0;
+SG_MUL_VAL_ 1039 P01_PAGE1_B5_RAW MULTIPLEX_PAGE 1-1;
+SG_MUL_VAL_ 1039 P02_NDR MULTIPLEX_PAGE 2-2;
+SG_MUL_VAL_ 1039 P03_VSP MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1039 P04_TWAD MULTIPLEX_PAGE 4-4;
+SG_MUL_VAL_ 1039 P05_NEOP MULTIPLEX_PAGE 5-5;
+SG_MUL_VAL_ 1039 P06_ICMDLCC MULTIPLEX_PAGE 6-6;
+SG_MUL_VAL_ 1039 P07_rsvd2 MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 UnspecifiedPage_rsvd4 MULTIPLEX_PAGE 8-15;
+SG_MUL_VAL_ 1039 P07_ATPL MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P07_ATPS MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P07_ATPD MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P07_ATPN MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P07_ATPR MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P07_ATPP MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P01_PAGE1_B6_RAW MULTIPLEX_PAGE 1-1;
+SG_MUL_VAL_ 1039 P03_STNDRDBF MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1039 P04_VB MULTIPLEX_PAGE 4-4;
+SG_MUL_VAL_ 1039 P05_rsvd0 MULTIPLEX_PAGE 5-5;
+SG_MUL_VAL_ 1039 P06_IACTLCC MULTIPLEX_PAGE 6-6;
+SG_MUL_VAL_ 1039 P07_rsvd3 MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 UnspecifiedPage_rsvd5 MULTIPLEX_PAGE 8-15;
+SG_MUL_VAL_ 1039 P03_CLPMOD MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1039 P03_DECFC MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1039 P07_PPIN MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P03_STVELDBF MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1039 P07_rsvd4 MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P03_STNTDBF MULTIPLEX_PAGE 3-3;
+SG_MUL_VAL_ 1039 P05_BRKSW MULTIPLEX_PAGE 5-5;
+SG_MUL_VAL_ 1039 P07_ATPRVS MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1039 P05_SCS MULTIPLEX_PAGE 5-5;
+SG_MUL_VAL_ 1039 P07_ATPFWD MULTIPLEX_PAGE 7-7;
+SG_MUL_VAL_ 1088 P31_unknown0 Mux 49-49;
+SG_MUL_VAL_ 1088 P32_RCLPBAT Mux 50-50;
+SG_MUL_VAL_ 1088 P33_unknown0 Mux 51-51;
+SG_MUL_VAL_ 1088 P39_unknown0 Mux 57-57;
+SG_MUL_VAL_ 1088 P3A_page3A_temp_word_RAW Mux 58-58;
+SG_MUL_VAL_ 1088 UnspecifiedPage_unknown0 Mux 0-48, 52-56, 59-255;
+SG_MUL_VAL_ 1088 P31_unknown1 Mux 49-49;
+SG_MUL_VAL_ 1088 P33_unknown1 Mux 51-51;
+SG_MUL_VAL_ 1088 P39_unknown1 Mux 57-57;
+SG_MUL_VAL_ 1088 P3A_unknown0 Mux 58-58;
+SG_MUL_VAL_ 1088 UnspecifiedPage_unknown1 Mux 0-48, 52-56, 59-255;
+SG_MUL_VAL_ 1088 P31_TPBAT Mux 49-49;
+SG_MUL_VAL_ 1088 P32_raw34 Mux 50-50;
+SG_MUL_VAL_ 1088 P33_unknown2 Mux 51-51;
+SG_MUL_VAL_ 1088 P39_VBATCO Mux 57-57;
+SG_MUL_VAL_ 1088 P3A_page3A_word34 Mux 58-58;
+SG_MUL_VAL_ 1088 UnspecifiedPage_unknown2 Mux 0-48, 52-56, 59-255;
+SG_MUL_VAL_ 1088 P31_SOCPBAT Mux 49-49;
+SG_MUL_VAL_ 1088 P33_unknown3 Mux 51-51;
+SG_MUL_VAL_ 1088 P39_SOHQPBAT Mux 57-57;
+SG_MUL_VAL_ 1088 UnspecifiedPage_unknown3 Mux 0-48, 52-56, 59-255;
+SG_MUL_VAL_ 1088 P31_d5_low3 Mux 49-49;
+SG_MUL_VAL_ 1088 P32_raw56 Mux 50-50;
+SG_MUL_VAL_ 1088 P33_unknown4 Mux 51-51;
+SG_MUL_VAL_ 1088 P39_SOFVPBAT Mux 57-57;
+SG_MUL_VAL_ 1088 P3A_raw56 Mux 58-58;
+SG_MUL_VAL_ 1088 UnspecifiedPage_unknown4 Mux 0-48, 52-56, 59-255;
+SG_MUL_VAL_ 1088 P31_d5_mid2 Mux 49-49;
+SG_MUL_VAL_ 1088 P31_d5_bit5 Mux 49-49;
+SG_MUL_VAL_ 1088 P31_d5_bit6 Mux 49-49;
+SG_MUL_VAL_ 1088 P31_unknown2 Mux 49-49;
+SG_MUL_VAL_ 1088 P31_d6_low3 Mux 49-49;
+SG_MUL_VAL_ 1088 P33_unknown5 Mux 51-51;
+SG_MUL_VAL_ 1088 P39_BATSRST Mux 57-57;
+SG_MUL_VAL_ 1088 UnspecifiedPage_unknown5 Mux 0-48, 52-56, 59-255;
+SG_MUL_VAL_ 1088 P39_BDCHGBAT Mux 57-57;
+SG_MUL_VAL_ 1088 P39_d6_bit2 Mux 57-57;
+SG_MUL_VAL_ 1088 P31_unknown3 Mux 49-49;
+SG_MUL_VAL_ 1088 P39_d6_bit3 Mux 57-57;
+SG_MUL_VAL_ 1088 P39_unknown2 Mux 57-57;
+SG_MUL_VAL_ 1088 P31_d6_bit6 Mux 49-49;
+SG_MUL_VAL_ 1088 P31_d6_bit7 Mux 49-49;
+SG_MUL_VAL_ 1088 P39_d6_bit7 Mux 57-57;
