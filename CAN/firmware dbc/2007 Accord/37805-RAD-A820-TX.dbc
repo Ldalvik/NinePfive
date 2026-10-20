@@ -5,22 +5,21 @@ NS_ :
 BS_:
 BU_: PCM NETWORK HDS INFERRED PROVEN
 
-CM_ SG_ 166 THROTTLE_VLV "range from 8-208";
-CM_ SG_ 166 ENGINE_START_MODE "Start/early-running phase; 400 RPM threshold with 150 RPM hysteresis and a timer. Not a starter-switch input.";
-CM_ SG_ 166 THROTTLE_BASE_TARGET "pedal/cruise target before rate limits and clamps";
-CM_ SG_ 166 THROTTLE_TARGET_ABOVE_IDLE "THROTTLE_BASE_TARGET minus Idle Target TH";
-
+CM_ SG_ 166 THROTTLE_VLV "Throttle angle: native clamp(trunc(221C/80),0,255), with 0.005 deg/internal count. Raw 255 may be upper clipped.";
 BO_ 166 ENGINE_DATA_1: 8 PCM
  SG_ FUEL_CUT_ACTIVE : 1|1@0+ (1,0) [0|1] "bool" PROVEN
  SG_ PCM_DTC_FLAG : 10|1@1+ (1,0) [0|1] "bool" PROVEN
- SG_ ENGINE_START_MODE : 9|1@1+ (1,0) [0|1] "bool" PROVEN
  SG_ THROTTLE_BASE_TARGET : 23|8@0+ (0.4,0) [0|102] "deg" PROVEN
- SG_ THROTTLE_VLV : 31|8@0+ (0.44498864457871,0.09802469881729964) [3.65793385544698|92.65566277118899] "%" HDS
+ SG_ THROTTLE_VLV : 31|8@0+ (0.4,0) [0|102] "deg" HDS
  SG_ THROTTLE_TARGET_ABOVE_IDLE : 39|8@0+ (0.4,0) [0|102] "deg" PROVEN
  SG_ COUNTER : 62|2@1+ (1,0) [0|3] "count" PROVEN
  SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "raw" PROVEN
 
-CM_ SG_ 200 DISTANCE_TRAVELED "Wraps every 255 (2560m)";
+CM_ SG_ 166 THROTTLE_BASE_TARGET "pedal/cruise target before rate limits and clamps";
+CM_ SG_ 166 THROTTLE_TARGET_ABOVE_IDLE "THROTTLE_BASE_TARGET minus Idle Target TH";
+
+
+CM_ SG_ 200 DISTANCE_TRAVELED "Modulo 2560 nominal metres; raw rolls over from 255 to 0.";
 BO_ 200 ENGINE_DATA_2: 8 PCM
  SG_ VEHICLE_SPEED : 7|16@0+ (0.01,0) [0|255.99] "km/h" HDS
  SG_ ALT_VEHICLE_SPEED : 39|16@0+ (0.01,0) [0|255.99] "km/h" PROVEN
@@ -28,8 +27,7 @@ BO_ 200 ENGINE_DATA_2: 8 PCM
  SG_ COUNTER : 62|2@1+ (1,0) [0|3] "count" PROVEN
  SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "raw" PROVEN
 
-CM_ SG_ 300 MIL "Check-engine lamp";
-CM_ SG_ 300 CRUISE_CONTROL_FAULT "Throttle failsafe mode or latched cruise set-speed consistency fault, copied during qualified cruise updates; may retain its previous value outside those updates.";
+
 
 BO_ 300 ENGINE_DATA_3: 8 PCM
  SG_ ECT_SENSOR_1 : 7|8@0+ (1,-40) [-40|150] "degC" HDS
@@ -44,6 +42,9 @@ BO_ 300 ENGINE_DATA_3: 8 PCM
 
 VAL_ 300 ECT_SENSOR_1 255 "Invalid" ;
 VAL_ 300 IAT_SENSOR_1 255 "Invalid" ;
+CM_ SG_ 300 MIL "Check-engine lamp";
+CM_ SG_ 300 CRUISE_CONTROL_FAULT "Throttle failsafe mode or latched cruise set-speed consistency fault, copied during qualified cruise updates; may retain its previous value outside those updates.";
+
 
 BO_ 392 TRANSMISSIONA_DATA: 8 PCM
  SG_ REPORTED_GEAR : 7|8@0+ (1,0) [0|255] "code" PROVEN
@@ -57,7 +58,9 @@ BO_ 392 TRANSMISSIONA_DATA: 8 PCM
 
 VAL_ 392 REPORTED_GEAR 0 "Unavailable" 1 "1" 2 "2" 3 "3" 4 "4" 5 "5" 6 "Reverse" 7 "Transition" ;
 VAL_ 392 MANUAL_GEAR_DISPLAY 0 "Inactive" 1 "1" 2 "2" 3 "3" 4 "4" 5 "5" 7 "Unavailable" ;
+VAL_ 392 SHIFT_CONTROL 0 "P/N" 1 "1st" 2 "2nd" 3 "3rd" 4 "4th" 5 "5th" 6 "R" ;
 VAL_ 392 GEAR_SELECTOR 0 "BetweenOrInvalid" 1 "P" 2 "R" 4 "N" 8 "D" 32 "D3" 64 "2" 128 "1" ;
+
 
 BO_ 524 ENGINE_DATA_4: 8 PCM
  SG_ EVAP_MONITOR_CONTINUE : 1|1@1+ (1,0) [0|1] "bool" PROVEN
@@ -67,8 +70,8 @@ BO_ 524 ENGINE_DATA_4: 8 PCM
  SG_ COUNTER : 62|2@1+ (1,0) [0|3] "count" PROVEN
  SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "raw" PROVEN
 
-CM_ SG_ 548 FUEL_CONSUMED "wraps at 65536";
-CM_ SG_ 548 PROGRAMMING_HANDSHAKE_COMPLETE "PGM/-FI diagnostic handshake accepted after native guards; does not indicate that flashing has completed.";
+CM_ SG_ 548 BARO_SENSOR "Mid-bin kPa estimate from the native pressure encoder; raw 0 lower clipped, raw 255 fault or upper saturation.";
+CM_ SG_ 548 FUEL_CONSUMED "Working mL estimate from transferred calibration; not independently metered for this firmware. Raw counter wraps modulo 65536; compare modulo deltas.";
 BO_ 548 ENGINE_DATA_5: 8 PCM
  SG_ BARO_SENSOR : 15|8@0+ (0.357105,12.3347525) [12.691857500000001|103.0394225] "kPa" HDS
  SG_ FUEL_CONSUMED : 23|16@0+ (0.105585,0) [0|6919.512975] "mL" INFERRED
@@ -78,4 +81,6 @@ BO_ 548 ENGINE_DATA_5: 8 PCM
  SG_ PROGRAMMING_HANDSHAKE_COMPLETE : 60|1@1+ (1,0) [0|1] "bool" PROVEN
  SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "raw" PROVEN
  
+VAL_ 548 SERVICE_CHECK_SIGNAL 0 "OPEN" 1 "SHORT" ;
 VAL_ 548 BARO_SENSOR 0 "Lower_clipped" 255 "Fault_or_saturated" ;
+CM_ SG_ 548 PROGRAMMING_HANDSHAKE_COMPLETE "PGMFI diagnostic handshake";
