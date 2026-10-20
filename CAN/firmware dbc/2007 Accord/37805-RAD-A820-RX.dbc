@@ -7,7 +7,6 @@ NS_ :
 BS_:
 BU_: PCM XXX HDS INFERRED PROVEN
 
-CM_ SG_ 212 FUEL_LEVEL_SENSOR_VOLTAGE "Nominal volts = B4*5/256; exact factory coefficient unresolved. PCM internally stores B4*4 counts.";
 CM_ SG_ 212 A_C_SWITCH "A/C switch/request state.";
 BO_ 212 CLUSTER_DATA_1: 8 CLUSTER
  SG_ CRUISE_BUTTON : 7|2@0+ (1,0) [0|3] "code" PCM,PROVEN
@@ -26,7 +25,6 @@ VAL_ 212 CRUISE_BUTTON 0 "none" 1 "SET/DECEL" 2 "RESUME/ACCEL" 3 "CANCEL" ;
 VAL_ 212 LIGHTING_MODE 0 "off" 1 "parking" 2 "low beam" 3 "high beam" ;
 
 
-CM_ BO_ 448 "Four 15-bit channels and 0.01 km/h scaling verified in PCM. Legacy wheel-corner assignments are not established by this firmware.";
 BO_ 448 WHEEL_SPEEDS: 8 VSA
  SG_ WHEEL_SPEED_FRONT_LEFT : 7|15@0+ (0.01,0) [0|327.67] "km/h" PCM,PROVEN
  SG_ WHEEL_SPEED_FRONT_RIGHT : 8|15@0+ (0.01,0) [0|327.67] "km/h" PCM,PROVEN
@@ -35,7 +33,6 @@ BO_ 448 WHEEL_SPEEDS: 8 VSA
  SG_ CHECKSUM : 59|4@0+ (1,0) [0|15] "raw" PCM,PROVEN
 
 
-CM_ SG_ 500 ODOMETER "Raw 24-bit count displayed as km using the supplied Accord research assumption. PCM caches B3:B4 only; full B3:B5 layout and whole-km units are not proven by this receiver.";
 BO_ 500 CLUSTER_DATA_2: 8 CLUSTER
  SG_ RIGHT_TURN_SIGNAL : 6|1@0+ (1,0) [0|1] "bool" PCM,PROVEN
  SG_ LEFT_TURN_SIGNAL : 5|1@0+ (1,0) [0|1] "bool" PCM,PROVEN
