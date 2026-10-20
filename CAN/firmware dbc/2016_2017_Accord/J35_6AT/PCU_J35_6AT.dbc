@@ -1,0 +1,17 @@
+VERSION "J35_6AT"
+
+
+NS_ :
+
+BS_:
+
+BU_: PCM PCU
+
+
+BO_ 923 PCU_0x39B: 2 PCU
+ SG_ UNKNOWN_1 : 0|6@1+ (1,0) [0|63] ""  PCM
+ SG_ SHIFT_INTERLOCK_INPUT : 6|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_1 : 7|1@1+ (1,0) [0|1] ""  PCM
+ SG_ CHECKSUM : 8|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 12|2@1+ (1,0) [0|3] ""  PCM
+ SG_ UNKNOWN_2 : 14|2@1+ (1,0) [0|3] ""  PCM
