@@ -1,0 +1,117 @@
+VERSION "Honda_Sensing"
+
+
+NS_ :
+	VAL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ADAS PCM VSA
+
+
+BO_ 506 ADAS_0x1FA: 8 ADAS
+ SG_ BRAKE_COMMAND_TBD : 7|10@0+ (1,0) [0|1023] ""  VSA
+ SG_ UNKNOWN_1 : 8|3@1+ (1,0) [0|7] ""  PCM
+ SG_ RSVD_1 : 11|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_15 : 12|1@1+ (1,0) [0|1] ""  PCM
+ SG_ RSVD_2 : 13|1@1+ (1,0) [0|1] ""  PCM
+ SG_ RSVD_3 : 28|1@1+ (1,0) [0|1] ""  PCM
+ SG_ RSVD_4 : 35|4@1+ (1,0) [0|15] ""  PCM
+ SG_ UNKNOWN_4 : 40|2@1+ (1,0) [0|3] ""  PCM
+ SG_ RSVD_5 : 42|1@1+ (1,0) [0|1] ""  PCM
+ SG_ UNKNOWN_5 : 43|2@1+ (1,0) [0|3] ""  PCM
+ SG_ UNKNOWN_6 : 45|3@1+ (1,0) [0|7] ""  PCM
+ SG_ RSVD_6 : 55|10@0+ (1,0) [0|1023] ""  PCM
+ SG_ STATUS_BIT_2 : 16|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_3 : 17|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_4 : 18|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_5 : 19|1@1+ (1,0) [0|1] ""  PCM
+ SG_ CRUISE_BRAKE_STATE_TBD : 20|2@1+ (1,0) [0|3] ""  PCM
+ SG_ STATUS_BIT_6 : 22|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_7 : 23|1@1+ (1,0) [0|1] ""  PCM
+ SG_ UNKNOWN_3 : 24|4@1+ (1,0) [0|15] ""  PCM
+ SG_ STATUS_BIT_9 : 29|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_10 : 30|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_11 : 31|1@1+ (1,0) [0|1] ""  PCM
+ SG_ CRUISE_STATUS_TBD : 32|3@1+ (1,0) [0|7] ""  PCM
+ SG_ STATUS_BIT_14 : 39|1@1+ (1,0) [0|1] ""  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+
+CM_ BO_ 506 "Camera reference layout; reserved positions may differ by camera version.";
+BO_ 780 ADAS_0x30C: 8 ADAS
+ SG_ ACC_SPEED_TBD : 7|16@0+ (0.01,0) [0.0|655.35] "km/h"  PCM
+ SG_ ACC_GAS_AUTHORITY_TBD : 16|8@1+ (5,0) [0|1275] ""  PCM
+ SG_ CRUISE_SPEED_TBD : 24|8@1+ (1,0) [0|255] ""  PCM
+ SG_ UNKNOWN_1 : 32|2@1+ (1,0) [0|3] ""  PCM
+ SG_ FCM_PROBLEM_TBD : 34|1@1+ (1,0) [0|1] ""  PCM
+ SG_ UNKNOWN_2 : 35|5@1+ (1,0) [0|31] ""  PCM
+ SG_ UNKNOWN_3 : 40|8@1+ (1,0) [0|255] ""  PCM
+ SG_ UNKNOWN_4 : 48|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+ SG_ UNKNOWN_5 : 62|2@1+ (1,0) [0|3] ""  PCM
+
+BO_ 829 ADAS_0x33D: 5 ADAS
+ SG_ STATUS_BIT_1 : 0|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ STATUS_BIT_2 : 1|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ RSVD_1 : 2|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ STATUS_BIT_3 : 4|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ STATUS_BIT_4 : 5|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ STATUS_BIT_5 : 6|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ STATUS_BIT_6 : 7|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ UNKNOWN_1 : 8|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ UNKNOWN_2 : 16|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ STATUS_BIT_7 : 20|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ STATUS_BIT_8 : 21|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ STATUS_BIT_9 : 22|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ STATUS_BIT_10 : 23|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ UNKNOWN_3 : 24|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ STATUS_BIT_11 : 26|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ UNKNOWN_4 : 27|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ STATUS_BIT_12 : 29|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ STATUS_BIT_13 : 30|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ RSVD_2 : 31|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ CHECKSUM : 32|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ COUNTER : 36|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ RSVD_3 : 38|2@1+ (1,0) [0|3] ""  Vector__XXX
+
+BO_ 927 ADAS_0x39F: 8 ADAS
+ SG_ RSVD_1 : 0|16@1+ (1,0) [0|65535] ""  Vector__XXX
+ SG_ UNKNOWN_1 : 16|5@1+ (1,0) [0|31] ""  Vector__XXX
+ SG_ RSVD_2 : 21|3@1+ (1,0) [0|7] ""  Vector__XXX
+ SG_ RSVD_3 : 24|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ UNKNOWN_2 : 39|9@0+ (1,0) [0|511] ""  Vector__XXX
+ SG_ UNKNOWN_3 : 46|8@0+ (1,0) [0|255] ""  Vector__XXX
+ SG_ RSVD_4 : 48|7@1+ (1,0) [0|127] ""  Vector__XXX
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ RSVD_5 : 62|2@1+ (1,0) [0|3] ""  Vector__XXX
+
+BO_ 1600 ADAS_0x640: 5 ADAS
+ SG_ DIAGNOSTIC : 7|24@0+ (1,0) [0|16777215] ""  Vector__XXX
+ SG_ RSVD_1 : 24|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ DIAGNOSTIC_MASK_MATCH : 25|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ MARKER : 26|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ RSVD_2 : 27|5@1+ (1,0) [0|31] ""  Vector__XXX
+ SG_ CHECKSUM : 32|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ COUNTER : 36|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ RSVD_3 : 38|2@1+ (1,0) [0|3] ""  Vector__XXX
+
+CM_ SG_ 1600 DIAGNOSTIC_MASK_MATCH "Diagnostic bitmap matches a configured mask.";
+CM_ BO_ 1600 "Camera reference layout: diagnostic bitmap match and normal transmission marker.";
+BO_ 1601 ADAS_0x641: 8 ADAS
+ SG_ REPORT_SEGMENT : 0|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ REPORT_SEQUENCE : 4|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ REPORT_MODE : 6|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ UNKNOWN_1 : 8|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ UNKNOWN_2 : 16|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ UNKNOWN_3 : 24|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ UNKNOWN_4 : 32|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ UNKNOWN_5 : 40|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ UNKNOWN_6 : 48|8@1+ (1,0) [0|255] ""  Vector__XXX
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ RSVD_1 : 62|2@1+ (1,0) [0|3] ""  Vector__XXX
+

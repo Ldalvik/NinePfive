@@ -1,0 +1,38 @@
+VERSION "J35_Common"
+
+
+NS_ :
+	VAL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ACM PCM
+
+
+BO_ 965 ACM_0x3C5: 8 ACM
+ SG_ UNKNOWN_1 : 0|7@1+ (1,0) [0|127] ""  PCM
+ SG_ CACHE_ADMISSION_MARKER : 7|1@1+ (1,0) [0|1] ""  PCM
+ SG_ UNKNOWN_2 : 8|8@1+ (1,0) [0|255] ""  PCM
+ SG_ UNKNOWN_3 : 16|8@1+ (1,0) [0|255] ""  PCM
+ SG_ UNKNOWN_4 : 24|8@1+ (1,0) [0|255] ""  PCM
+ SG_ UNKNOWN_5 : 32|8@1+ (1,0) [0|255] ""  PCM
+ SG_ UNKNOWN_6 : 40|8@1+ (1,0) [0|255] ""  PCM
+ SG_ UNKNOWN_7 : 48|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+ SG_ UNKNOWN_8 : 62|2@1+ (1,0) [0|3] ""  PCM
+
+BO_ 966 ACM_0x3C6: 8 ACM
+ SG_ UNKNOWN_1 : 0|7@1+ (1,0) [0|127] ""  PCM
+ SG_ CACHE_ADMISSION_MARKER : 7|1@1+ (1,0) [0|1] ""  PCM
+ SG_ UNKNOWN_2 : 8|8@1+ (1,0) [0|255] ""  PCM
+ SG_ UNKNOWN_3 : 16|8@1+ (1,0) [0|255] ""  PCM
+ SG_ UNKNOWN_4 : 24|8@1+ (1,0) [0|255] ""  PCM
+ SG_ UNKNOWN_5 : 32|8@1+ (1,0) [0|255] ""  PCM
+ SG_ UNKNOWN_6 : 40|8@1+ (1,0) [0|255] ""  PCM
+ SG_ UNKNOWN_7 : 48|8@1+ (1,0) [0|255] ""  PCM
+ SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+ SG_ UNKNOWN_8 : 62|2@1+ (1,0) [0|3] ""  PCM
+

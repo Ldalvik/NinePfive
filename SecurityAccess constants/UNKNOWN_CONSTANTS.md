@@ -1,0 +1,24 @@
+# UNKNOWN security constants
+
+| Firmware ID | k0 | k1 | k2 | Algorithm |
+|---|---|---|---|---|
+| `39673-T38-C010` | `3BDB` | `E6A5` | `48F3` | UNKNOWN |
+| `39673-T38-C020` | `274D` | `4D42` | `F4FD` | UNKNOWN |
+| `39673-T38-C030` | `2913` | `AE8C` | `1D84` | UNKNOWN |
+| `39673-T38-C040` | `22D2` | `DE9C` | `969F` | UNKNOWN |
+| `39673-T43-J010` | `AD13` | `50B0` | `9C48` | UNKNOWN |
+| `39673-T43-J020` | `EBC6` | `5DC1` | `B62F` | UNKNOWN |
+| `39673-T43-J030` | `EEE2` | `9041` | `C779` | UNKNOWN |
+| `39673-T43-J040` | `76E2` | `4EFC` | `ABD5` | UNKNOWN |
+| `39673-T43-J050` | `57EC` | `B8A3` | `25FC` | UNKNOWN |
+| `3G215-5WM-A010` | `39F8` | `7E14` | `BC37` | UNKNOWN |
+| `3G215-5WM-A020` | `0106` | `0107` | `0108` | UNKNOWN |
+| `3G215-5WM-A510` | `39F9` | `7E15` | `BC38` | UNKNOWN |
+| `3G215-5WM-A520` | `0107` | `0108` | `0109` | UNKNOWN |
+| `3K201-5WM-A310` | `1982` | `0012` | `0024` | UNKNOWN |
+| `3K201-5WM-A320` | `1982` | `0012` | `0024` | UNKNOWN |
+| `3K201-5WM-A330` | `00FB` | `00FC` | `00FD` | UNKNOWN |
+| `3K201-5WM-A340` | `00F7` | `00F8` | `00F9` | UNKNOWN |
+| `3K201-5WM-A510` | `0101` | `0102` | `0103` | UNKNOWN |
+| `3K201-5WM-A520` | `0103` | `0104` | `0105` | UNKNOWN |
+| `3K201-5WM-A530` | `00F9` | `00FA` | `00FB` | UNKNOWN |

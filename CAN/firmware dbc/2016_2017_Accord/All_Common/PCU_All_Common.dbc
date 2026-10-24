@@ -1,0 +1,27 @@
+VERSION "All_Common"
+
+
+NS_ :
+	VAL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: PCM PCU
+
+
+BO_ 507 PCU_0x1FB: 1 PCU
+ SG_ CHECKSUM : 0|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 4|2@1+ (1,0) [0|3] ""  PCM
+ SG_ STATUS_BIT_1 : 6|1@1+ (1,0) [0|1] ""  PCM
+ SG_ IDLE_STOP_INHIBIT_INPUT : 7|1@1+ (1,0) [0|1] ""  PCM
+
+CM_ SG_ 507 IDLE_STOP_INHIBIT_INPUT "Idle-stop inhibit input before filtering.";
+CM_ BO_ 507 "Input is filtered before the diagnostic state is reported.";
+BO_ 923 PCU_0x39B: 2 PCU
+ SG_ UNKNOWN_1 : 0|6@1+ (1,0) [0|63] ""  PCM
+ SG_ SHIFT_INTERLOCK_INPUT : 6|1@1+ (1,0) [0|1] ""  PCM
+ SG_ STATUS_BIT_1 : 7|1@1+ (1,0) [0|1] ""  PCM
+ SG_ CHECKSUM : 8|4@1+ (1,0) [0|15] ""  PCM
+ SG_ COUNTER : 12|2@1+ (1,0) [0|3] ""  PCM
+ SG_ UNKNOWN_2 : 14|2@1+ (1,0) [0|3] ""  PCM

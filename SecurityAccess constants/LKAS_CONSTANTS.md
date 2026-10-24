@@ -1,0 +1,23 @@
+# LKAS security constants
+
+| Firmware ID | k0 | k1 | k2 | Algorithm |
+|---|---|---|---|---|
+| `36877-T2M-Q010` | `5AA1` | `0159` | `1E0F` | UNKNOWN |
+| `36877-T2M-Q020` | `9799` | `9C5D` | `5F81` | UNKNOWN |
+| `36877-T2N-Q010` | `5035` | `9212` | `5358` | UNKNOWN |
+| `36877-T2N-Q020` | `D356` | `E76E` | `D137` | UNKNOWN |
+| `36877-T3W-J010` | `15B6` | `D75D` | `B52D` | UNKNOWN |
+| `36877-T3W-J020` | `6FF1` | `0F2E` | `E67C` | UNKNOWN |
+| `36877-T3W-J030` | `5914` | `EFEE` | `E0DE` | UNKNOWN |
+| `36877-T3W-J040` | `8782` | `7BA5` | `3BB8` | UNKNOWN |
+| `36877-TY2-A010` | `3CD5` | `7489` | `350C` | UNKNOWN |
+| `36877-TY2-A020` | `C009` | `00D8` | `C640` | UNKNOWN |
+| `36877-TY2-A030` | `CF4A` | `7D8C` | `3D92` | UNKNOWN |
+| `36877-TY2-A040` | `1352` | `7546` | `35B9` | UNKNOWN |
+| `36877-TY3-A010` | `CB38` | `151D` | `1BDD` | UNKNOWN |
+| `36877-TY3-A030` | `38E3` | `A419` | `6930` | UNKNOWN |
+| `36877-TY3-H010` | `2FA6` | `DE5F` | `C128` | UNKNOWN |
+| `36877-TY3-H040` | `8FAB` | `0A07` | `649C` | UNKNOWN |
+| `36877-TZ6-A010` | `60A2` | `479E` | `1409` | UNKNOWN |
+| `36877-TZ6-A012` | `0D07` | `9B63` | `5E51` | UNKNOWN |
+| `36877-TZ6-A020` | `DE48` | `100F` | `101F` | UNKNOWN |
