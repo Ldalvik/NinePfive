@@ -5,7 +5,6 @@ NS_ :
 BS_:
 BU_: PCM NETWORK HDS INFERRED PROVEN
 
-CM_ SG_ 166 THROTTLE_VLV "Throttle angle: native clamp(trunc(221C/80),0,255), with 0.005 deg/internal count. Raw 255 may be upper clipped.";
 BO_ 166 ENGINE_DATA_1: 8 PCM
  SG_ FUEL_CUT_ACTIVE : 1|1@0+ (1,0) [0|1] "bool" PROVEN
  SG_ PCM_DTC_FLAG : 10|1@1+ (1,0) [0|1] "bool" PROVEN
@@ -19,14 +18,12 @@ CM_ SG_ 166 THROTTLE_BASE_TARGET "pedal/cruise target before rate limits and cla
 CM_ SG_ 166 THROTTLE_TARGET_ABOVE_IDLE "THROTTLE_BASE_TARGET minus Idle Target TH";
 
 
-CM_ SG_ 200 DISTANCE_TRAVELED "Modulo 2560 nominal metres; raw rolls over from 255 to 0.";
 BO_ 200 ENGINE_DATA_2: 8 PCM
  SG_ VEHICLE_SPEED : 7|16@0+ (0.01,0) [0|255.99] "km/h" HDS
  SG_ ALT_VEHICLE_SPEED : 39|16@0+ (0.01,0) [0|255.99] "km/h" PROVEN
  SG_ DISTANCE_TRAVELED : 55|8@0+ (10,0) [0|2550] "m" PROVEN
  SG_ COUNTER : 62|2@1+ (1,0) [0|3] "count" PROVEN
  SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "raw" PROVEN
-
 
 
 BO_ 300 ENGINE_DATA_3: 8 PCM
@@ -70,8 +67,7 @@ BO_ 524 ENGINE_DATA_4: 8 PCM
  SG_ COUNTER : 62|2@1+ (1,0) [0|3] "count" PROVEN
  SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] "raw" PROVEN
 
-CM_ SG_ 548 BARO_SENSOR "Mid-bin kPa estimate from the native pressure encoder; raw 0 lower clipped, raw 255 fault or upper saturation.";
-CM_ SG_ 548 FUEL_CONSUMED "Working mL estimate from transferred calibration; not independently metered for this firmware. Raw counter wraps modulo 65536; compare modulo deltas.";
+
 BO_ 548 ENGINE_DATA_5: 8 PCM
  SG_ BARO_SENSOR : 15|8@0+ (0.357105,12.3347525) [12.691857500000001|103.0394225] "kPa" HDS
  SG_ FUEL_CONSUMED : 23|16@0+ (0.105585,0) [0|6919.512975] "mL" INFERRED
