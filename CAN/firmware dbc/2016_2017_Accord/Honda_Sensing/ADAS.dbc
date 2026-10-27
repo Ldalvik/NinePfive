@@ -39,7 +39,6 @@ BO_ 506 ADAS_0x1FA: 8 ADAS
  SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
  SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
 
-CM_ BO_ 506 "Camera reference layout; reserved positions may differ by camera version.";
 BO_ 780 ADAS_0x30C: 8 ADAS
  SG_ ACC_SPEED_TBD : 7|16@0+ (0.01,0) [0.0|655.35] "km/h"  PCM
  SG_ ACC_GAS_AUTHORITY_TBD : 16|8@1+ (5,0) [0|1275] ""  PCM
@@ -99,8 +98,6 @@ BO_ 1600 ADAS_0x640: 5 ADAS
  SG_ COUNTER : 36|2@1+ (1,0) [0|3] ""  Vector__XXX
  SG_ RSVD_3 : 38|2@1+ (1,0) [0|3] ""  Vector__XXX
 
-CM_ SG_ 1600 DIAGNOSTIC_MASK_MATCH "Diagnostic bitmap matches a configured mask.";
-CM_ BO_ 1600 "Camera reference layout: diagnostic bitmap match and normal transmission marker.";
 BO_ 1601 ADAS_0x641: 8 ADAS
  SG_ REPORT_SEGMENT : 0|4@1+ (1,0) [0|15] ""  Vector__XXX
  SG_ REPORT_SEQUENCE : 4|2@1+ (1,0) [0|3] ""  Vector__XXX

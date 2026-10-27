@@ -207,7 +207,6 @@ BO_ 985 VSA_0x3D9: 3 VSA
  SG_ CHECKSUM : 16|4@1+ (1,0) [0|15] ""  UNKNOWN
  SG_ COUNTER : 20|2@1+ (1,0) [0|3] ""  UNKNOWN
  SG_ UNKNOWN_3 : 22|2@1+ (1,0) [0|3] ""  UNKNOWN
-CM_ BO_ 985 "Marker is normally set and may clear during startup.";
 BO_ 1030 VSA_0x406: 5 VSA
  SG_ UNKNOWN_1 : 0|8@1+ (1,0) [0|255] ""  UNKNOWN
  SG_ UNKNOWN_2 : 8|8@1+ (1,0) [0|255] ""  UNKNOWN
