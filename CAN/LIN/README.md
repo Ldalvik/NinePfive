@@ -1,9 +1,5 @@
-# Pilot LIN payloads
-
-Pilot cluster `78109-TG7-A040`. Use 19,200 bit/s for the Pilot reference. The nominal polling schedule has 10 ms slots.
-
-`BREAK 55 PID [payload] CHECKSUM`
-
+# LIN bus
+19,200 bit/s
 
 | SensorS | Flow |
 |---|---|
