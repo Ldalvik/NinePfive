@@ -20,8 +20,8 @@ BO_ 506 ADAS_0x1FA: 8 ADAS
  SG_ RSVD_4 : 35|4@1+ (1,0) [0|15] ""  PCM
  SG_ UNKNOWN_4 : 40|2@1+ (1,0) [0|3] ""  PCM
  SG_ RSVD_5 : 42|1@1+ (1,0) [0|1] ""  PCM
- SG_ UNKNOWN_5 : 43|2@1+ (1,0) [0|3] ""  PCM
- SG_ UNKNOWN_6 : 45|3@1+ (1,0) [0|7] ""  PCM
+ SG_ BRAKE_HUD_DISPLAY_CODE_REF : 43|2@1+ (1,0) [0|3] ""  PCM
+ SG_ BRAKE_HUD_CHIME_CODE_REF : 45|3@1+ (1,0) [0|7] ""  PCM
  SG_ RSVD_6 : 55|10@0+ (1,0) [0|1023] ""  PCM
  SG_ STATUS_BIT_2 : 16|1@1+ (1,0) [0|1] ""  PCM
  SG_ STATUS_BIT_3 : 17|1@1+ (1,0) [0|1] ""  PCM
@@ -38,6 +38,7 @@ BO_ 506 ADAS_0x1FA: 8 ADAS
  SG_ STATUS_BIT_14 : 39|1@1+ (1,0) [0|1] ""  PCM
  SG_ CHECKSUM : 56|4@1+ (1,0) [0|15] ""  PCM
  SG_ COUNTER : 60|2@1+ (1,0) [0|3] ""  PCM
+VAL_ 506 BRAKE_HUD_CHIME_CODE_REF 0 "NO_CHIME" 1 "REPEATED_BEEP" 2 "CONTINUOUS_TONE" 3 "SINGLE_BEEP" 4 "DOUBLE_BEEP" 5 "CONTINUOUS_TONE_ALT" ;
 
 BO_ 780 ADAS_0x30C: 8 ADAS
  SG_ ACC_SPEED_TBD : 7|16@0+ (0.01,0) [0.0|655.35] "km/h"  PCM
@@ -53,28 +54,40 @@ BO_ 780 ADAS_0x30C: 8 ADAS
  SG_ UNKNOWN_5 : 62|2@1+ (1,0) [0|3] ""  PCM
 
 BO_ 829 ADAS_0x33D: 5 ADAS
- SG_ STATUS_BIT_1 : 0|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ STATUS_BIT_2 : 1|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ CAMERA_STATUS_LOSS_CHIME_ARM_REF : 0|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LKAS_PROBLEM_ALERT_REF : 1|1@1+ (1,0) [0|1] ""  Vector__XXX
  SG_ RSVD_1 : 2|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ STATUS_BIT_3 : 4|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LKAS_NOW_AVAILABLE_ALERT_REF : 4|1@1+ (1,0) [0|1] ""  Vector__XXX
  SG_ STATUS_BIT_4 : 5|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ STATUS_BIT_5 : 6|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ STATUS_BIT_6 : 7|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ UNKNOWN_1 : 8|8@1+ (1,0) [0|255] ""  Vector__XXX
- SG_ UNKNOWN_2 : 16|4@1+ (1,0) [0|15] ""  Vector__XXX
- SG_ STATUS_BIT_7 : 20|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ STATUS_BIT_8 : 21|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ STATUS_BIT_9 : 22|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ STATUS_BIT_10 : 23|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ UNKNOWN_3 : 24|2@1+ (1,0) [0|3] ""  Vector__XXX
- SG_ STATUS_BIT_11 : 26|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ UNKNOWN_4 : 27|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ LKAS_STATE_CHANGE_REF : 6|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ CAMERA_TEMPERATURE_HIGH_ALERT_REF : 7|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LKAS_STEERING_REQUIRED_REF : 8|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ RDM_DISPLAY_REQUEST_REF : 9|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LKAS_SOLID_LANE_LINES_REF : 10|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LKAS_OFF_ALERT_REF : 11|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LKAS_PROBLEM_REF : 12|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ ADAS_DTC_DISPLAY_REQUEST_REF : 13|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LKAS_DASHED_LANE_LINES_REF : 14|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LKAS_CAMERA_TOO_HOT_ALERT_REF : 15|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LKAS_HUD_CHIME_CODE_REF : 16|4@1+ (1,0) [0|15] ""  Vector__XXX
+ SG_ RDM_ON_STATE_REF : 20|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ RDM_LDW_PROBLEM_REF : 21|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LANE_ASSIST_WARNING_LAMP_REF : 22|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ RDM_HUD_RETRIGGER_STATE_REF : 23|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ RDM_WARNING_SETTING_CODE_REF : 24|2@1+ (1,0) [0|3] ""  Vector__XXX
+ SG_ CLEAN_WINDSHIELD_ALERT_REF : 26|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ RDM_MODE_NOTICE_CODE_REF : 27|2@1+ (1,0) [0|3] ""  Vector__XXX
  SG_ STATUS_BIT_12 : 29|1@1+ (1,0) [0|1] ""  Vector__XXX
- SG_ STATUS_BIT_13 : 30|1@1+ (1,0) [0|1] ""  Vector__XXX
+ SG_ LANE_ASSIST_BEEP_OFF_REF : 30|1@1+ (1,0) [0|1] ""  Vector__XXX
  SG_ RSVD_2 : 31|1@1+ (1,0) [0|1] ""  Vector__XXX
  SG_ CHECKSUM : 32|4@1+ (1,0) [0|15] ""  Vector__XXX
  SG_ COUNTER : 36|2@1+ (1,0) [0|3] ""  Vector__XXX
  SG_ RSVD_3 : 38|2@1+ (1,0) [0|3] ""  Vector__XXX
+VAL_ 829 LKAS_HUD_CHIME_CODE_REF 0 "NO_CHIME" 1 "REPEATED_BEEP" 2 "TRIPLE_BEEP" 3 "SINGLE_BEEP" 4 "DOUBLE_BEEP" 5 "HELD_TONE" ;
+CM_ SG_ 829 LKAS_SOLID_LANE_LINES_REF "Takes priority when both lane styles are requested.";
+VAL_ 829 RDM_MODE_NOTICE_CODE_REF 0 "NO_MODE_NOTICE" 1 "RDM_OFF_NOTICE" 2 "RDM_ON_NOTICE" 3 "RDM_WARNING_ONLY_NOTICE" ;
+CM_ SG_ 829 CAMERA_STATUS_LOSS_CHIME_ARM_REF "A qualified receive fault can chime after this bit was set.";
+VAL_ 829 RDM_WARNING_SETTING_CODE_REF 2 "WARNING_ONLY" ;
 
 BO_ 927 ADAS_0x39F: 8 ADAS
  SG_ RSVD_1 : 0|16@1+ (1,0) [0|65535] ""  Vector__XXX

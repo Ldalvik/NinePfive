@@ -39,6 +39,4 @@
 | i-SHIFT | [2E](FCAN/i-SHIFT/Mode%202E%20%28Write%20DID%29.md) · [2F](FCAN/i-SHIFT/Mode%202F%20%28Input%20Output%20Control%29.md) · [31](FCAN/i-SHIFT/Mode%2031%20%28Routine%20Control%29.md) |
 | MICU / Body Electrical | [Functional tests](KLINE/MICU/Functional%20Tests.md) · [Local-ID controls](KLINE/MICU/Local%20Identifier%20Controls.md) · [Stop session](KLINE/MICU/Stop%20Diagnostic%20Session.md) |
 
-## Legacy Honda serial diagnostics
 
-[2007 Accord 37805-RAD-A820 initialization and 43 data-page reads](../CAN/firmware%20dbc/2007%20Accord/37805-RAD-A820-DIAGNOSTICS.md) use Honda K-line serial framing. These recovered packets are not established as UDS/ISO-TP CAN requests.
