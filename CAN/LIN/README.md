@@ -1,7 +1,7 @@
 # LIN bus
 19,200 bit/s
 
-| SensorS | Flow |
+| Sensors | Flow |
 |---|---|
 | Cabin temperature sensor (left side of radio unit) | Wired to HVAC for temperature control |
 | Outside-air temperature sensor (behind the front bumper) | Wired to HVAC for cluster LCD readout |
